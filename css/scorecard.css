@@ -17,6 +17,7 @@ input { -webkit-appearance: none; border-radius: 0; }
 /*
 Fonts
 */
+/* ElenaBasic */
 @font-face {
     font-family: 'ElenaBasic';
     font-weight: 400;
@@ -33,6 +34,7 @@ Fonts
     font-weight: 700;
     src: url('../fonts/ElenaBasic/ElenaBasic-Bold.otf');
 }
+/* GothamCondSSm */
 @font-face {
     font-family: 'GothamCondSSm';
     font-weight: 300;
@@ -74,7 +76,7 @@ header .headlines h1 {
     background-color: #003852;
     color: #fff;
     display: block;
-    font-family: 'GothamCondSSm';
+    font-family: 'GothamCondSSm', sans-serif;
     font-size: 39px;
     font-weight: 300;
     letter-spacing: 0.32px;
@@ -110,7 +112,7 @@ header .headlines .issued-by .text {
     font-weight: 300;
     font-size: 18px;
     line-height: 1;
-    font-family: 'GothamCondSSm';
+    font-family: 'GothamCondSSm', sans-serif;
 }
 header .headlines .issued-by .logo {
     position: absolute;
@@ -129,63 +131,116 @@ Scorecard
 section.scorecard {
 
 }
-section.scorecard div.intro {
+section.scorecard .intro {
     background-color: #fff;
     padding: 0 0 70px;
 }
-section.scorecard div.intro div.description {
+section.scorecard .intro .description {
     color: #353535;
     padding: 35px 20px 30px;
     line-height: 1.24;
     font-size: 15px;
     text-align: left;
 }
-section.scorecard div.grades {
-    margin: 0 auto;
-    max-width: 700px;
+section.scorecard .intro .how {
 }
-section.scorecard div.grades h3 {
+section.scorecard .intro .how h3 {
     background-color: #fff;
     border-radius: 55px 55px 0 0;
     border: 5px solid #41809f;
     border-bottom: none;
     box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.7);
     color: #353535;
-    font-family: 'GothamCondSSm';
-    font-size: 28px;
+    font-family: 'GothamCondSSm', sans-serif;
+    font-size: 30px;
     font-weight: 700;
-    height: 76px;
-    letter-spacing: 0;
-    margin: -70px 0 0;
-    padding: 23px 0 0;
+    height: 106px;
+    letter-spacing: 0.32px;
+    line-height: 35px;
+    margin: 0 0 0;
+    padding: 17px 0 0;
     position: relative;
     text-align: center;
     z-index: 1;
 }
-section.scorecard div.grades div.candidates {
+section.scorecard .intro .how .blue {
+    background-color: #41809f;
+    color: #fff;
+    font-family: 'ElenaBasic', sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+section.scorecard .intro .how .blue a {
+    color: #fff;
+}
+section.scorecard .intro .how .blue > .text {
+    padding: 31px 21px 32px;
+}
+section.scorecard .intro .how .blue .number {
+    width: 53px;
+    height: 53px;
+    border-radius: 99px;
+    background-color: #fff;
+    left: -8px;
+    position: absolute;;
+}
+section.scorecard .intro .how .blue .number .text {
+    color: #41809f;
+    font-family: 'GothamCondSSm', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+section.scorecard .intro .how .blue .criteria-1 {
+    height: 78px;
+    padding: 0 0 0 69px;
+}
+section.scorecard .intro .how .blue .criteria-1 > .text {
+    line-height: 1.24;
+    padding: 11px 16px 0 0;
+}
+section.scorecard .intro .how .blue .criteria-2 {
+    height: 300px;
+    padding: 0 0 0 69px;
+}
+section.scorecard .intro .how .blue .criteria-2 > .text {
+    padding: 21px 16px 0 0;
+}
+
+
+/* ... to do ... */
+section.scorecard .grades {
+    margin: 0 auto;
+    max-width: 700px;
+}
+section.scorecard .grades .candidates {
     background-color: #fff;
     padding: 21px 50px 0;
 }
-section.scorecard div.grades div.candidates div.candidate {
+section.scorecard .grades .candidates .candidate {
     box-shadow: inset -1px 2px 3px rgba(0, 0, 0, 0.14);
     cursor: pointer;
     min-height: 142px;
     position: relative;
 }
-section.scorecard div.grades div.candidates div.candidate img {
+section.scorecard .grades .candidates .candidate img {
     display: block;
     height: 142px;
     width: 142px;
     position: absolute;
     left: 0;
 }
-section.scorecard div.grades div.candidates div.candidate div.bar {
+section.scorecard .grades .candidates .candidate .bar {
 
 }
-section.scorecard div.grades div.disclaimer {
+section.scorecard .grades .disclaimer {
     background-color: #fff;
 }
-section.scorecard div.grades div.disclaimer div.description {
+section.scorecard .grades .disclaimer .description {
     margin: 0 auto;
     max-width: 530px;
     padding: 34px 30px 25px;
