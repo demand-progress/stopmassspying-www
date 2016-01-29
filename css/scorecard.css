@@ -1,0 +1,193 @@
+/*
+Reset
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+input { -webkit-appearance: none; border-radius: 0; }
+* { box-sizing: border-box; }
+
+
+/*
+Fonts
+*/
+@font-face {
+    font-family: 'ElenaBasic';
+    font-weight: 400;
+    src: url('../fonts/ElenaBasic/ElenaBasic-Regular.otf');
+}
+@font-face {
+    font-family: 'ElenaBasic';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/ElenaBasic/ElenaBasic-RegularItalic.otf');
+}
+@font-face {
+    font-family: 'ElenaBasic';
+    font-weight: 700;
+    src: url('../fonts/ElenaBasic/ElenaBasic-Bold.otf');
+}
+@font-face {
+    font-family: 'GothamCondSSm';
+    font-weight: 300;
+    src: url('../fonts/GothamCondSSm/GothamCondSSm-Light.otf');
+}
+@font-face {
+    font-family: 'GothamCondSSm';
+    font-weight: 700;
+    src: url('../fonts/GothamCondSSm/GothamCondSSm-Bold.otf');
+}
+
+
+/*
+General
+*/
+body {
+    background: #f2ebc7;
+    background-image: url(../images/cream.png);
+    background-size: 160px;
+    font-family: 'ElenaBasic', sans-serif;
+    min-width: 320px;
+}
+strong {
+    font-weight: bold;
+}
+
+
+/*
+Header
+*/
+header {
+}
+header .headlines {
+    background-image: url(../images/bg-money-bw-1000px-30q.jpg);
+    background-size: cover;
+    padding: 59px 0 0;
+}
+header .headlines h1 {
+    background-color: #003852;
+    color: #fff;
+    display: block;
+    font-family: 'GothamCondSSm';
+    font-size: 39px;
+    font-weight: 300;
+    letter-spacing: 0.32px;
+    line-height: 47px;
+    margin: 0;
+    padding: 25px 16px 31px;
+    text-align: center;
+}
+header .headlines h1 .strong {
+    display: block;
+    font-weight: 700;
+}
+header .headlines .issued-by {
+    height: 79px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 320px;
+}
+header .headlines .issued-by .circle {
+    background-color: #fff;
+    border-radius: 999px;
+    height: 176px;
+    position: absolute;
+    right: 7px;
+    top: -60px;
+    width: 176px;
+}
+header .headlines .issued-by .text {
+    position: absolute;
+    top: 7px;
+    right: 66px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1;
+    font-family: 'GothamCondSSm';
+}
+header .headlines .issued-by .logo {
+    position: absolute;
+    width: 132px;
+    top: 37px;
+    right: 27px;
+}
+
+
+/*
+Scorecard
+*/
+/*
+Scorecard
+*/
+section.scorecard {
+
+}
+section.scorecard div.intro {
+    background-color: #fff;
+    padding: 0 0 70px;
+}
+section.scorecard div.intro div.description {
+    color: #353535;
+    padding: 35px 20px 30px;
+    line-height: 1.24;
+    font-size: 15px;
+    text-align: left;
+}
+section.scorecard div.grades {
+    margin: 0 auto;
+    max-width: 700px;
+}
+section.scorecard div.grades h3 {
+    background-color: #fff;
+    border-radius: 55px 55px 0 0;
+    border: 5px solid #41809f;
+    border-bottom: none;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.7);
+    color: #353535;
+    font-family: 'GothamCondSSm';
+    font-size: 28px;
+    font-weight: 700;
+    height: 76px;
+    letter-spacing: 0;
+    margin: -70px 0 0;
+    padding: 23px 0 0;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+section.scorecard div.grades div.candidates {
+    background-color: #fff;
+    padding: 21px 50px 0;
+}
+section.scorecard div.grades div.candidates div.candidate {
+    box-shadow: inset -1px 2px 3px rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+    min-height: 142px;
+    position: relative;
+}
+section.scorecard div.grades div.candidates div.candidate img {
+    display: block;
+    height: 142px;
+    width: 142px;
+    position: absolute;
+    left: 0;
+}
+section.scorecard div.grades div.candidates div.candidate div.bar {
+
+}
+section.scorecard div.grades div.disclaimer {
+    background-color: #fff;
+}
+section.scorecard div.grades div.disclaimer div.description {
+    margin: 0 auto;
+    max-width: 530px;
+    padding: 34px 30px 25px;
+    text-align: left;
+}
