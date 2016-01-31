@@ -269,10 +269,10 @@ section.scorecard .grades .candidates {
 }
 section.scorecard .grades .candidates .candidate {
     cursor: pointer;
-    min-height: 142px;
+    min-height: 128px;
     position: relative;
 }
-section.scorecard .grades .candidates .candidate img {
+section.scorecard .grades .candidates .candidate .portrait {
     display: block;
     height: 128px;
     width: 128px;
@@ -306,6 +306,10 @@ section.scorecard .grades .candidates .candidate .grade .circle-inner {
     width: 92px;
     z-index: 2;
 }
+section.scorecard .grades .candidates .candidate.democrat .grade .circle-outer,
+section.scorecard .grades .candidates .candidate.democrat .grade .circle-inner {
+    background-color: #37b9cc;
+}
 section.scorecard .grades .candidates .candidate .grade .text {
     color: #fff;
     font-family: 'GothamCondSSm', sans-serif;
@@ -320,11 +324,42 @@ section.scorecard .grades .candidates .candidate .grade .text {
     width: 110px;
     z-index: 3;
 }
-section.scorecard .grades .candidates .candidate .grade .text.minus {
+section.scorecard .grades .candidates .candidate .grade .text.minus,
+section.scorecard .grades .candidates .candidate .grade .text.plus {
     left: 7px;
 }
 section.scorecard .grades .candidates .candidate .dropdown {
-
+    padding-top: 128px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .bar {
+    background-color: #ebebeb;
+    box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+section.scorecard .grades .candidates .candidate .dropdown .bar .name {
+    float: left;
+    font-family: 'GothamCondSSm', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 9px 0 0 22px;
+    position: relative;
+}
+section.scorecard .grades .candidates .candidate .dropdown .bar .party {
+    float: left;
+    font-family: 'GothamCondSSm', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    padding: 16px 0 0 10px;
+    position: relative;
+}
+section.scorecard .grades .candidates .candidate .dropdown .bar .arrow {
+    height: 10px;
+    position: absolute;
+    top: 18px;
+    width: 22px;
+    right: 21px;
 }
 section.scorecard .grades .candidates .shadow-caster {
     background-color: #fff;
