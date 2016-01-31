@@ -57,6 +57,9 @@ body {
     font-family: 'ElenaBasic', sans-serif;
     min-width: 320px;
 }
+em {
+    font-style: italic;
+}
 strong {
     font-weight: bold;
 }
@@ -75,10 +78,10 @@ header .headlines .background {
     background-image: url(../images/bg-money-bw-1000px-30q.jpg);
     background-size: cover;
     height: 100%;
+    opacity: 0.5;
     position: absolute;
     top: 0;
     width: 100%;
-    transition: opacity .3236s;
 }
 header .headlines h1 {
     background-color: #003852;
@@ -116,7 +119,7 @@ header .headlines .issued-by .circle {
 }
 header .headlines .issued-by .text {
     position: absolute;
-    top: 7px;
+    top: 10px;
     right: 66px;
     font-weight: 300;
     font-size: 18px;
@@ -151,8 +154,12 @@ section.scorecard .intro .description {
     line-height: 1.24;
     font-size: 15px;
     text-align: left;
+    max-width: 520px;
+    margin: 0 auto;
 }
 section.scorecard .intro .how {
+    max-width: 520px;
+    margin: 0 auto;
 }
 section.scorecard .intro .how h3 {
     background-color: #fff;
@@ -414,7 +421,6 @@ section.scorecard .photo-credits {
 }
 section.scorecard .photo-credits a {
     color: inherit;
-    text-decoration: none;
 }
 
 /*
@@ -423,10 +429,6 @@ Responsive styles for Desktop
 @media (min-width: 940px) {
     header .headlines {
         padding: 55px 0 0;
-    }
-
-    header .headlines .background {
-        opacity: 0.5;
     }
 
     header .headlines h1 {
