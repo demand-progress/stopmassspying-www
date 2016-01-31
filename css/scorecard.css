@@ -368,11 +368,32 @@ section.scorecard .grades .candidates .shadow-caster {
     position: relative;
 }
 section.scorecard .grades .disclaimer {
-    background-color: #fff;
+    background-color: #003852;
+    border-top: solid 54px #fff;
 }
 section.scorecard .grades .disclaimer .description {
+    color: #fff;
+    line-height: 1.24;
     margin: 0 auto;
-    max-width: 530px;
-    padding: 34px 30px 25px;
+    padding: 17px 21px 32px;
     text-align: left;
+}
+section.scorecard .grades .disclaimer .description a {
+    color: inherit;
+    text-decoration: none;
+}
+section.scorecard .grades .disclaimer .logo {
+    margin: 0 0 27px 53px;
+    position: relative;
+    width: 215px;
+}
+section.scorecard .photo-credits {
+    color: #353535;
+    font-size: 12px;
+    padding: 15px 26px 13px;
+    line-height: 1.24;
+}
+section.scorecard .photo-credits a {
+    color: inherit;
+    text-decoration: none;
 }
