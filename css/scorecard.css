@@ -366,6 +366,9 @@ section.scorecard .grades .candidates .candidate .dropdown .bar .party {
     padding: 16px 0 0 10px;
     position: relative;
 }
+section.scorecard .grades .candidates .candidate .dropdown .bar .read-more {
+    display: none;
+}
 section.scorecard .grades .candidates .candidate .dropdown .bar .arrow {
     height: 10px;
     position: absolute;
@@ -466,7 +469,57 @@ Responsive styles for Desktop
     }
 
     section.scorecard .grades .candidates {
+        box-shadow: none;
         width: 644px;
+        padding-top: 0;
+    }
+
+    section.scorecard .grades .candidates .candidate {
+        box-shadow: inset 1.4px 1.4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    section.scorecard .grades .candidates .candidate .grade {
+        right: 87px;
+        top: 9px;
+    }
+
+    section.scorecard .grades .candidates .candidate .dropdown {
+        padding-top: 0;
+    }
+
+    section.scorecard .grades .candidates .candidate .dropdown .bar {
+        background-color: transparent;
+        box-shadow: none;
+        height: 128px;
+    }
+
+    section.scorecard .grades .candidates .candidate .dropdown .bar .name {
+        padding: 47px 0 0 177px;
+    }
+
+    section.scorecard .grades .candidates .candidate .dropdown .bar .party {
+        padding: 54px 0 0 11px;
+    }
+
+    section.scorecard .grades .candidates .candidate .dropdown .bar .arrow {
+        right: 31px;
+        top: 108px;
+    }
+
+    section.scorecard .grades .candidates .candidate .dropdown .bar .read-more {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 86px;
+        font-family: 'GothamCondSSm', sans-serif;
+        font-weight: 700;
+        color: #313640;
+        font-size: 16px;
+    }
+
+    section.scorecard .grades .candidates .block {
+        box-shadow: none;
+        height: 19px;
     }
 
     section.scorecard .disclaimer .description {
