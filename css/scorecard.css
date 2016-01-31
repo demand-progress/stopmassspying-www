@@ -68,9 +68,17 @@ Header
 header {
 }
 header .headlines {
+    padding: 59px 0 0;
+    position: relative;
+}
+header .headlines .background {
     background-image: url(../images/bg-money-bw-1000px-30q.jpg);
     background-size: cover;
-    padding: 59px 0 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: opacity .3236s;
 }
 header .headlines h1 {
     background-color: #003852;
@@ -83,6 +91,7 @@ header .headlines h1 {
     line-height: 47px;
     margin: 0;
     padding: 25px 16px 31px;
+    position: relative;
     text-align: center;
 }
 header .headlines h1 .strong {
@@ -129,10 +138,11 @@ Scorecard
 Scorecard
 */
 section.scorecard {
-
 }
 section.scorecard .intro {
     background-color: #fff;
+    margin: 0 auto;
+    max-width: 900px;
     padding: 0 0 27px;
 }
 section.scorecard .intro .description {
@@ -242,7 +252,9 @@ section.scorecard .intro .how .blue .criteria-3 > .text {
 }
 section.scorecard .grades {
     background-color: #fff;
+    border-bottom: solid 54px #fff;
     margin: 0 auto;
+    max-width: 900px;
 }
 section.scorecard .grades h3 {
     background-color: #70842e;
@@ -361,28 +373,32 @@ section.scorecard .grades .candidates .candidate .dropdown .bar .arrow {
     width: 22px;
     right: 21px;
 }
-section.scorecard .grades .candidates .shadow-caster {
+section.scorecard .grades .candidates .block {
     background-color: #fff;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.14);
     height: 32px;
     position: relative;
 }
-section.scorecard .grades .disclaimer {
+section.scorecard .disclaimer {
     background-color: #003852;
-    border-top: solid 54px #fff;
 }
-section.scorecard .grades .disclaimer .description {
-    color: #fff;
+section.scorecard .disclaimer .wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+section.scorecard .disclaimer .description {
+    color: #f6f4ea;
+    font-size: 14px;
     line-height: 1.24;
     margin: 0 auto;
     padding: 17px 21px 32px;
     text-align: left;
 }
-section.scorecard .grades .disclaimer .description a {
+section.scorecard .disclaimer .description a {
     color: inherit;
     text-decoration: none;
 }
-section.scorecard .grades .disclaimer .logo {
+section.scorecard .disclaimer .logo {
     margin: 0 0 27px 53px;
     position: relative;
     width: 215px;
@@ -396,4 +412,76 @@ section.scorecard .photo-credits {
 section.scorecard .photo-credits a {
     color: inherit;
     text-decoration: none;
+}
+
+/*
+Responsive styles for Desktop
+*/
+@media (min-width: 940px) {
+    header .headlines {
+        padding: 55px 0 0;
+    }
+
+    header .headlines .background {
+        opacity: 0.5;
+    }
+
+    header .headlines h1 {
+        font-size: 49px;
+        line-height: 58px;
+        padding: 16px 16px 16px;
+    }
+
+    section.scorecard .intro {
+        overflow: hidden;
+        padding: 0 0 40px;
+    }
+
+    section.scorecard .intro .description {
+        float: left;
+        font-size: 19px;
+        padding: 61px 45px 30px 64px;
+        width: 432px;
+    }
+
+    section.scorecard .intro .how {
+        float: right;
+        margin: 34px 49px 0 0;
+        box-shadow: 2px -1px 4px rgba(0, 0, 0, 0.6);
+        width: 418px;
+        border-radius: 55px 55px 0 0;
+    }
+
+    section.scorecard .intro .how h3 {
+        box-shadow: none;
+    }
+
+    section.scorecard .grades {
+        padding: 0 63px;
+        border-bottom: solid 74px #fff;
+    }
+
+    section.scorecard .grades h3 {
+        width: 320px;
+    }
+
+    section.scorecard .grades .candidates {
+        width: 644px;
+    }
+
+    section.scorecard .disclaimer .description {
+        padding: 17px 64px 36px;
+    }
+
+    section.scorecard .disclaimer .logo {
+        margin: 0 0 25px 64px;
+        position: relative;
+        width: 215px;
+    }
+
+    section.scorecard .photo-credits {
+        padding: 24px 64px 13px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
 }
