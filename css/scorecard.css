@@ -286,26 +286,26 @@ section.scorecard .grades .candidates {
     box-shadow: inset 3px 1px 3px rgba(0, 0, 0, 0.14);
     padding: 30px 0 0;
 }
-section.scorecard .grades .candidates .candidate {
+section.scorecard .grades .candidates .candidate .card {
     cursor: pointer;
-    min-height: 128px;
+    min-height: 178px;
     position: relative;
 }
-section.scorecard .grades .candidates .candidate .portrait {
+section.scorecard .grades .candidates .candidate .card .portrait {
     display: block;
     height: 128px;
     width: 128px;
     position: absolute;
     left: 27px;
 }
-section.scorecard .grades .candidates .candidate .grade {
+section.scorecard .grades .candidates .candidate .card .grade {
     height: 110px;
     position: absolute;
     right: 26px;
     top: 8px;
     width: 110px;
 }
-section.scorecard .grades .candidates .candidate .grade .circle-outer {
+section.scorecard .grades .candidates .candidate .card .grade .circle-outer {
     background-color: #e43e39;
     border-radius: 99px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.32);
@@ -314,7 +314,7 @@ section.scorecard .grades .candidates .candidate .grade .circle-outer {
     width: 110px;
     z-index: 1;
 }
-section.scorecard .grades .candidates .candidate .grade .circle-inner {
+section.scorecard .grades .candidates .candidate .card .grade .circle-inner {
     background-color: #e43e39;
     border-radius: 99px;
     box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.28);
@@ -325,11 +325,11 @@ section.scorecard .grades .candidates .candidate .grade .circle-inner {
     width: 92px;
     z-index: 2;
 }
-section.scorecard .grades .candidates .candidate.democrat .grade .circle-outer,
-section.scorecard .grades .candidates .candidate.democrat .grade .circle-inner {
+section.scorecard .grades .candidates .candidate.democrat .card .grade .circle-outer,
+section.scorecard .grades .candidates .candidate.democrat .card .grade .circle-inner {
     background-color: #37b9cc;
 }
-section.scorecard .grades .candidates .candidate .grade .text {
+section.scorecard .grades .candidates .candidate .card .grade .text {
     color: #fff;
     font-family: 'GothamCondSSm', sans-serif;
     font-size: 77px;
@@ -343,21 +343,22 @@ section.scorecard .grades .candidates .candidate .grade .text {
     width: 110px;
     z-index: 3;
 }
-section.scorecard .grades .candidates .candidate .grade .text.minus,
-section.scorecard .grades .candidates .candidate .grade .text.plus {
+section.scorecard .grades .candidates .candidate .card .grade .text.minus,
+section.scorecard .grades .candidates .candidate .card .grade .text.plus {
     left: 7px;
 }
-section.scorecard .grades .candidates .candidate .dropdown {
-    padding-top: 128px;
-}
-section.scorecard .grades .candidates .candidate .dropdown .bar {
+section.scorecard .grades .candidates .candidate .card .bar {
     background-color: #ebebeb;
     box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.1);
     height: 50px;
     overflow: hidden;
+    top: 128px;
     position: relative;
 }
-section.scorecard .grades .candidates .candidate .dropdown .bar .name {
+section.scorecard .grades .candidates .candidate.opened .card .bar {
+    height: 100px;
+}
+section.scorecard .grades .candidates .candidate .card .bar .name {
     float: left;
     font-family: 'GothamCondSSm', sans-serif;
     font-size: 30px;
@@ -365,7 +366,7 @@ section.scorecard .grades .candidates .candidate .dropdown .bar .name {
     padding: 9px 0 0 22px;
     position: relative;
 }
-section.scorecard .grades .candidates .candidate .dropdown .bar .party {
+section.scorecard .grades .candidates .candidate .card .bar .party {
     float: left;
     font-family: 'GothamCondSSm', sans-serif;
     font-size: 22px;
@@ -373,15 +374,67 @@ section.scorecard .grades .candidates .candidate .dropdown .bar .party {
     padding: 16px 0 0 10px;
     position: relative;
 }
-section.scorecard .grades .candidates .candidate .dropdown .bar .read-more {
-    display: none;
-}
-section.scorecard .grades .candidates .candidate .dropdown .bar .arrow {
+section.scorecard .grades .candidates .candidate .card .bar .arrow {
     height: 10px;
     position: absolute;
-    top: 18px;
-    width: 22px;
     right: 21px;
+    top: 19px;
+    transition: margin-top 0.1618s;
+    width: 22px;
+}
+section.scorecard .grades .candidates .candidate.opened .card .bar .arrow {
+    margin-top: 5px;
+    transform: rotate(180deg);
+}
+section.scorecard .grades .candidates .candidate .card .bar .read-more {
+    display: none;
+}
+section.scorecard .grades .candidates .candidate .dropdown {
+    display: none;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category {
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .title {
+    background-color: #e43e39;
+    border-radius: 37px 37px 0 0;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-family: 'GothamCondSSm', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.24;
+    padding: 12px 70px 12px 23px;
+    position: relative;
+}
+section.scorecard .grades .candidates .candidate.democrat .dropdown .category .title {
+    background-color: #37b9cc;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .title .icon {
+    height: 29px;
+    opacity: 0.27;
+    position: absolute;
+    right: 29px;
+    top: calc((100% - 29px) / 2);
+    width: 23px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .bullets {
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .bullets .bullet {
+    border: 3px solid #ebebeb;
+    color: #353535;
+    font-size: 15px;
+    line-height: 1.24;
+    margin: 0 20px;
+    padding: 12px 17px 10px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .bullets .bullet:nth-of-type(even) {
+    background-color: #ebebeb;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .bullets .bullet a {
+    color: inherit;
+}
+section.scorecard .grades .candidates .candidate.opened .dropdown {
+    display: block;
 }
 section.scorecard .grades .candidates .block {
     background-color: #fff;
@@ -427,14 +480,14 @@ section.scorecard .photo-credits a {
 Responsive styles for Desktop
 */
 @media (min-width: 440px) {
-    section.scorecard .grades .candidates .candidate .grade {
+    section.scorecard .grades .candidates .candidate .card .grade {
         left: 303px;
         right: auto;
     }
 }
 
 @media (min-width: 500px) {
-    section.scorecard .grades .candidates .candidate .grade {
+    section.scorecard .grades .candidates .candidate .card .grade {
         left: auto;
         right: 87px;
     }
@@ -457,40 +510,46 @@ Responsive styles for Desktop
         width: 644px;
     }
 
-    section.scorecard .grades .candidates .candidate {
+    section.scorecard .grades .candidates .candidate .card {
         box-shadow: inset 1.4px 1.4px 6px rgba(0, 0, 0, 0.2);
+        min-height: 128px;
     }
 
-    section.scorecard .grades .candidates .candidate .grade {
+    section.scorecard .grades .candidates .candidate .card .grade {
         left: auto;
         right: 87px;
         top: 9px;
     }
 
-    section.scorecard .grades .candidates .candidate .dropdown {
-        padding-top: 0;
-    }
-
-    section.scorecard .grades .candidates .candidate .dropdown .bar {
+    section.scorecard .grades .candidates .candidate .card .bar {
         background-color: transparent;
         box-shadow: none;
         height: 128px;
+        top: 0;
     }
 
-    section.scorecard .grades .candidates .candidate .dropdown .bar .name {
+    section.scorecard .grades .candidates .candidate.opened .card .bar {
+        height: 128px;
+    }
+
+    section.scorecard .grades .candidates .candidate .card .bar .name {
         padding: 47px 0 0 177px;
     }
 
-    section.scorecard .grades .candidates .candidate .dropdown .bar .party {
+    section.scorecard .grades .candidates .candidate .card .bar .party {
         padding: 54px 0 0 11px;
     }
 
-    section.scorecard .grades .candidates .candidate .dropdown .bar .arrow {
+    section.scorecard .grades .candidates .candidate .card .bar .arrow {
         right: 31px;
         top: 108px;
     }
 
-    section.scorecard .grades .candidates .candidate .dropdown .bar .read-more {
+    section.scorecard .grades .candidates .candidate.opened .card .bar .arrow {
+        margin-top: 0;
+    }
+
+    section.scorecard .grades .candidates .candidate .card .bar .read-more {
         display: block;
         position: absolute;
         right: 15px;
@@ -501,9 +560,19 @@ Responsive styles for Desktop
         font-size: 16px;
     }
 
+    section.scorecard .grades .candidates .candidate.opened .card .bar .read-more {
+        right: 20px;
+    }
+
     section.scorecard .grades .candidates .block {
         box-shadow: none;
         height: 19px;
+    }
+
+    section.scorecard .grades .candidates .candidate .dropdown .category .title .icon {
+        height: 36px;
+        top: calc((100% - 36px) / 2);
+        width: 29px;
     }
 }
 
