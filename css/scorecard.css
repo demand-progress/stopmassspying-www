@@ -415,6 +415,9 @@ section.scorecard .grades .candidates .candidate .dropdown .category > .title {
     padding: 12px 50px 12px 23px;
     position: relative;
 }
+section.scorecard .grades .candidates .candidate .dropdown .category > .title.championing {
+    font-size: 28px;
+}
 section.scorecard .grades .candidates .candidate.democrat .dropdown .category > .title {
     background-color: #37b9cc;
 }
@@ -422,9 +425,13 @@ section.scorecard .grades .candidates .candidate .dropdown .category > .title .i
     height: 29px;
     opacity: 0.27;
     position: absolute;
-    right: 22px;
+    right: 20px;
     top: calc((100% - 29px) / 2);
     width: 23px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category > .title .icon.ribbon {
+    height: 34px;
+    top: calc((100% - 34px) / 2);
 }
 section.scorecard .grades .candidates .candidate .dropdown .category .principle > .title {
     background-color: #d1f9ff;
@@ -462,7 +469,7 @@ section.scorecard .grades .candidates .candidate .dropdown .category .principle 
     right: 18px;
     top: 19px;
     transition: margin-top 0.1618s;
-    width: 22px;
+    width: 20px;
 }
 section.scorecard .grades .candidates .candidate .dropdown .category .principle.opened > .title .arrow {
     margin-top: 4px;
@@ -491,7 +498,7 @@ section.scorecard .grades .candidates .candidate .dropdown .category .principle.
     display: block;
 }
 section.scorecard .grades .candidates .candidate .dropdown .category.every-voice-criteria .principle .bullets .bullet {
-    padding-right: 70px;
+    padding-right: 80px;
     position: relative;
 }
 section.scorecard .grades .candidates .candidate .dropdown .category .principle.opened:last-child .bullets .bullet:last-child {
@@ -670,10 +677,25 @@ Responsive styles for Desktop
     }
 
     section.scorecard .grades .candidates .candidate .dropdown .category > .title .icon {
-        height: 36px;
-        right: 29px;
+        height: 34px;
+        right: 28px;
         top: calc((100% - 36px) / 2);
-        width: 29px;
+        width: 27px;
+    }
+    section.scorecard .grades .candidates .candidate .dropdown .category > .title .icon.ribbon {
+        height: 40px;
+        right: 28px;
+        top: calc((100% - 43px) / 2);
+        width: 27px;
+    }
+    section.scorecard .grades .candidates .candidate .dropdown .category .principle > .title .arrow {
+        right: 28px;
+    }
+    section.scorecard .grades .candidates .candidate .dropdown .category .principle .bullets .bullet .checkbox {
+        right: 28px;
+    }
+    section.scorecard .grades .candidates .candidate .dropdown .category .principle .bullets .bullet .checkmark {
+        right: 23px;
     }
 }
 
