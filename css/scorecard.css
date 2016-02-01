@@ -20,30 +20,35 @@ Fonts
 /* ElenaBasic */
 @font-face {
     font-family: 'ElenaBasic';
+    font-style: normal;
     font-weight: 400;
-    src: url('../fonts/ElenaBasic/ElenaBasic-Regular.otf');
+    src: local('ElenaBasicWeb'), url('../fonts/ElenaBasic/ElenaBasic-Regular.woff') format('woff');
 }
 @font-face {
     font-family: 'ElenaBasic';
     font-style: italic;
     font-weight: 400;
-    src: url('../fonts/ElenaBasic/ElenaBasic-RegularItalic.otf');
+    src: local('ElenaBasicWeb'), url('../fonts/ElenaBasic/ElenaBasic-RegularItalic.woff') format('woff');
 }
 @font-face {
     font-family: 'ElenaBasic';
+    font-style: normal;
     font-weight: 700;
-    src: url('../fonts/ElenaBasic/ElenaBasic-Bold.otf');
+    src: local('ElenaBasicWeb'), url('../fonts/ElenaBasic/ElenaBasic-Bold.woff') format('woff');
 }
 /* GothamCondSSm */
 @font-face {
     font-family: 'GothamCondSSm';
+    font-style: normal;
     font-weight: 300;
-    src: url('../fonts/GothamCondSSm/GothamCondSSm-Light.otf');
+    src: local('GothamCondSSmWeb'), url('../fonts/GothamCondSSm/GothamCondSSm-Light.woff') format('woff');
 }
 @font-face {
     font-family: 'GothamCondSSm';
+    font-style: normal;
     font-weight: 700;
-    src: url('../fonts/GothamCondSSm/GothamCondSSm-Bold.otf');
+    src: url('../fonts/GothamCondSSm/GothamCondSSm-Bold.eot');
+    src: local('GothamCondSSmWeb'), url('../fonts/GothamCondSSm/GothamCondSSm-Bold.woff') format('woff');
 }
 
 
