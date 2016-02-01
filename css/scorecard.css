@@ -392,12 +392,18 @@ section.scorecard .grades .candidates .candidate.opened .card .bar .arrow {
 section.scorecard .grades .candidates .candidate .card .bar .read-more {
     display: none;
 }
+section.scorecard .grades .candidates .candidate .card .bar .read-more::after {
+    content: 'Read more';
+}
+section.scorecard .grades .candidates .candidate.opened .card .bar .read-more::after {
+    content: 'Read less';
+}
 section.scorecard .grades .candidates .candidate .dropdown {
     display: none;
 }
 section.scorecard .grades .candidates .candidate .dropdown .category {
 }
-section.scorecard .grades .candidates .candidate .dropdown .category .title {
+section.scorecard .grades .candidates .candidate .dropdown .category > .title {
     background-color: #e43e39;
     border-radius: 37px 37px 0 0;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -406,19 +412,61 @@ section.scorecard .grades .candidates .candidate .dropdown .category .title {
     font-size: 22px;
     font-weight: 700;
     line-height: 1.24;
-    padding: 12px 70px 12px 23px;
+    padding: 12px 50px 12px 23px;
     position: relative;
 }
-section.scorecard .grades .candidates .candidate.democrat .dropdown .category .title {
+section.scorecard .grades .candidates .candidate.democrat .dropdown .category > .title {
     background-color: #37b9cc;
 }
-section.scorecard .grades .candidates .candidate .dropdown .category .title .icon {
+section.scorecard .grades .candidates .candidate .dropdown .category > .title .icon {
     height: 29px;
     opacity: 0.27;
     position: absolute;
-    right: 29px;
+    right: 22px;
     top: calc((100% - 29px) / 2);
     width: 23px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle > .title {
+    background-color: #d1f9ff;
+    color: #353535;
+    cursor: pointer;
+    border-bottom: solid 3px #37b9cc;
+    border-left: solid 3px #37b9cc;
+    border-right: solid 3px #37b9cc;
+    font-family: 'GothamCondSSm', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.24;
+    padding: 12px 70px 12px 20px;
+    position: relative;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle:last-child > .title {
+    padding-bottom: 62px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category:last-child .principle:last-child > .title,
+section.scorecard .grades .candidates .candidate .dropdown .category .principle.opened:last-child > .title {
+    padding-bottom: 12px;
+}
+/* Question: Could this be more specific, and still work? */
+.category + .category {
+    margin-top: -50px;
+}
+/* Question: Could this be more specific, and still work? */
+.principle.opened + .principle {
+    border-top: solid 3px #37b9cc;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle > .title .arrow {
+    cursor: pointer;
+    height: 10px;
+    position: absolute;
+    right: 18px;
+    top: 19px;
+    transition: margin-top 0.1618s;
+    width: 22px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle.opened > .title .arrow {
+    margin-top: 4px;
+    transform: rotate(180deg);
 }
 section.scorecard .grades .candidates .candidate .dropdown .category .bullets {
 }
@@ -435,6 +483,40 @@ section.scorecard .grades .candidates .candidate .dropdown .category .bullets .b
 }
 section.scorecard .grades .candidates .candidate .dropdown .category .bullets .bullet a {
     color: inherit;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle .bullets {
+    display: none;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle.opened .bullets {
+    display: block;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category.every-voice-criteria .principle .bullets .bullet {
+    padding-right: 70px;
+    position: relative;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle.opened:last-child .bullets .bullet:last-child {
+    border-bottom-width: 53px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category:last-child .principle.opened:last-child .bullets .bullet:last-child {
+    border-bottom-width: 3px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle .bullets .bullet .checkbox {
+    height: 30px;
+    position: absolute;
+    right: 22px;
+    top: calc((100% - 30px) / 2);
+    width: 30px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle .bullets .bullet .checkmark {
+    display: none;
+    height: 32px;
+    position: absolute;
+    right: 17px;
+    top: calc((100% - 32px) / 2 - 6px);
+    width: 35px;
+}
+section.scorecard .grades .candidates .candidate .dropdown .category .principle .bullets .bullet.checked .checkmark {
+    display: block;
 }
 section.scorecard .grades .candidates .candidate .dropdown .failed {
     background-color: #ebebeb;
@@ -583,8 +665,13 @@ Responsive styles for Desktop
         height: 19px;
     }
 
-    section.scorecard .grades .candidates .candidate .dropdown .category .title .icon {
+    section.scorecard .grades .candidates .candidate .dropdown .category > .title {
+        padding-right: 70px;
+    }
+
+    section.scorecard .grades .candidates .candidate .dropdown .category > .title .icon {
         height: 36px;
+        right: 29px;
         top: calc((100% - 36px) / 2);
         width: 29px;
     }
