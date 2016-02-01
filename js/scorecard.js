@@ -1,4 +1,7 @@
 $(function() {
+    // Fix potential click delay on mobile devices
+    FastClick.attach(document.body);
+
     $('.candidates').on('click', '.candidate', function(e) {
         $(this).toggleClass('opened');
     });
