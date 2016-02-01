@@ -11,9 +11,9 @@ $(function() {
         e.stopPropagation();
     });
 
-    $('.candidates').on('click', '.subject', function(e) {
-        e.stopPropagation();
-
-        console.log($(this));
-    });
+    // $('.candidates').on('click', '.subject', function(e) {
+    //     e.stopPropagation();
+    //
+    //     console.log($(this));
+    // });
 });

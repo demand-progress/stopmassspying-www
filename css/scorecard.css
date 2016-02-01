@@ -358,6 +358,9 @@ section.scorecard .grades .candidates .candidate .card .bar {
 section.scorecard .grades .candidates .candidate.opened .card .bar {
     height: 100px;
 }
+section.scorecard .grades .candidates .candidate.opened.failed .card .bar {
+    height: 50px;
+}
 section.scorecard .grades .candidates .candidate .card .bar .name {
     float: left;
     font-family: 'GothamCondSSm', sans-serif;
@@ -432,6 +435,16 @@ section.scorecard .grades .candidates .candidate .dropdown .category .bullets .b
 }
 section.scorecard .grades .candidates .candidate .dropdown .category .bullets .bullet a {
     color: inherit;
+}
+section.scorecard .grades .candidates .candidate .dropdown .failed {
+    background-color: #ebebeb;
+    color: #353535;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.24;
+    margin: 16px 20px 0;
+    padding: 12px 17px 10px;
+    position: relative;
 }
 section.scorecard .grades .candidates .candidate.opened .dropdown {
     display: block;
@@ -528,7 +541,8 @@ Responsive styles for Desktop
         top: 0;
     }
 
-    section.scorecard .grades .candidates .candidate.opened .card .bar {
+    section.scorecard .grades .candidates .candidate.opened .card .bar,
+    section.scorecard .grades .candidates .candidate.opened.failed .card .bar {
         height: 128px;
     }
 
