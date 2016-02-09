@@ -291,6 +291,27 @@ section.scorecard .grades .candidates {
     box-shadow: inset 3px 1px 3px rgba(0, 0, 0, 0.14);
     padding: 30px 0 0;
 }
+section.scorecard .grades .candidates .dropped-label {
+    background-color: #eee;
+    border-radius: 55px 55px 0 0;
+    border-bottom: none;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.2);
+    color: #555;
+    font-family: 'GothamCondSSm', sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+    height: 65px;
+    letter-spacing: 0.32px;
+    line-height: 35px;
+    margin: 48px 0 0;
+    padding: 17px 0 0;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+section.scorecard .grades .candidates .candidate.dropped{
+    opacity: 0.5;
+}
 section.scorecard .grades .candidates .candidate .card {
     cursor: pointer;
     min-height: 178px;
@@ -569,7 +590,7 @@ section.scorecard .disclaimer .description a {
     text-decoration: none;
 }
 section.scorecard .disclaimer .logo {
-    margin: 0 0 27px 53px;
+    margin: 0 0 27px 21px;
     position: relative;
     width: 215px;
 }
@@ -615,6 +636,11 @@ Responsive styles for Desktop
         margin-left: calc((100% - 644px) / 2);
         padding-top: 0;
         width: 644px;
+    }
+
+    section.scorecard .grades .candidates .dropped-label {
+        margin-left: calc((100% - 644px) / 2);
+        width: 320px;
     }
 
     section.scorecard .grades .candidates .candidate .card {
