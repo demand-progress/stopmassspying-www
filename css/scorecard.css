@@ -309,8 +309,7 @@ section.scorecard .grades .candidates .dropped-label {
     text-align: center;
     z-index: 1;
 }
-section.scorecard .grades .candidates .candidate.dropped .card .portrait,
-section.scorecard .grades .candidates .candidate.dropped .card .grade {
+section.scorecard .grades .candidates .candidate.dropped .card {
     opacity: 0.5;
 }
 section.scorecard .grades .candidates .candidate .card {
