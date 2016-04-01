@@ -4,7 +4,7 @@
 
 
 // Share text
-var DOMAIN = "fightbigmoney.com";
+var DOMAIN = "dontsellourhomestowallstreet.org";
 var TWEET_TEXT = "I just called on the presidential candidates to lay out a concrete plan to #FightBigMoney in politics! Join here: http://" + DOMAIN + "/?source=${source}";
 var EMAIL_SUBJECT = "Sign this petition to fight big money in politics?";
 var EMAIL_BODY = "Hi,\
