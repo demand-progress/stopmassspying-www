@@ -244,9 +244,8 @@ function shuffleLogos() {
 }
 
 function fetchActionKitCount() {
-    // Embed https://act.demandprogress.org/progress/fight-big-money?callback=onActionKitCount
     var script = document.createElement('script');
-    script.src = 'https://act.demandprogress.org/progress/fight-big-money?callback=onActionKitCount';
+    script.src = 'https://act.demandprogress.org/progress/dontsellourhomestowallstreetorg?callback=onActionKitCount';
     document.head.appendChild(script);
 }
 
