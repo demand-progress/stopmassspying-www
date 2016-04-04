@@ -36,8 +36,8 @@ a:hover {
     color: #eee;
 }
 body {
-    background: #f2ebc7;
-    background-image: url(../images/cream.png);
+    background: #3f3b3f;
+    /*background-image: url(../images/cream.png);*/
     background-size: 160px;
     font-family: "Open Sans";
     text-align: center;
@@ -192,7 +192,7 @@ header p.protest {
     text-align: left;
 }
 header .headlines {
-    background-image: url(../images/bg-money.jpg);
+    /*background-image: url(../images/bg-money.jpg);*/
     background-size: cover;
     padding: 28px 0 0;
 }
@@ -202,56 +202,53 @@ header .headlines .fade-wrapper {
     width: 100%;
 }
 header .headlines .fade {
-    background-image: url(../images/bg-gradient-fade.png);
+    /*background-image: url(../images/bg-gradient-fade.png);*/
     height: 75px;
     position: absolute;
     top: 2px;
     width: 100%;
 }
 header .headlines h1 {
-    background-color: rgba(150, 45, 62, 0.91);
-    color: #F6F4EA;
+    color: #daeaef;
     display: inline-block;
-    font-size: 56px;
+    font-size: 54px;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0 0 3px;
+    margin: 0;
     padding: 8px 16px;
 }
 header .headlines h2 {
-    background-color: rgba(52, 136, 153, 0.91);
-    color: #F6F4EA;
+    color: #daeaef;
     display: inline-block;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bold;
-    margin: 0 0 3px;
+    margin: 0;
     padding: 8px 16px;
 }
 header .headlines h3 {
-    background-color: rgba(52, 136, 153, 0.91);
-    color: #F2EBC7;
+    color: #f11010;
     display: inline-block;
     font-size: 28px;
-    font-style: italic;
-    font-weight: normal;
-    margin: 0 0 3px;
+    font-weight: bold;
+    margin: 0;
     padding: 8px 16px;
 }
 
 @media screen and (max-width: 799px) {
     header .headlines h1 {
-        font-size: 36px;
+        font-size: 24px;
         line-height: 1.2;
+        padding: 4px 16px;
     }
 
     header .headlines h2 {
         font-size: 22px;
-        line-height: 1.2;
+        padding: 4px 16px;
     }
 
     header .headlines h3 {
         font-size: 18px;
-        line-height: 1.2;
+        padding: 4px 16px 16px;
     }
 
     header .hide-on-mobile {
@@ -264,6 +261,18 @@ header .headlines h3 {
     header .headlines h2,
     header .headlines h3 {
         display: block;
+    }
+
+    header .headlines h1 {
+        font-size: 18px;
+    }
+
+    header .headlines h2 {
+        font-size: 16px;
+    }
+
+    header .headlines h3 {
+        font-size: 12px;
     }
 
     header .headlines br {
@@ -281,7 +290,7 @@ header .headlines h3 {
 }
 
 .action-wrapper .red-bar {
-    background-color: #962d3e;
+    background-color: #697f87;
     height: calc(100% - 270px);
     margin-top: 135px;
     position: absolute;
@@ -289,7 +298,7 @@ header .headlines h3 {
 }
 
 .action {
-    background: #353535;
+    background: #9dbdc6;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     margin: 35px auto 0;
     max-width: 600px;
@@ -299,7 +308,7 @@ header .headlines h3 {
 }
 
 .action h2 {
-    color: #F2EBC7;
+    color: #3f3b3f;
     font-size: 36px;
     letter-spacing: normal;
     padding: 0px 0px 16px;
@@ -313,9 +322,13 @@ header .headlines h3 {
 }
 
 .action h4 {
-    color: #F2EBC7;
+    color: #3f3b3f;
     font-size: 20px;
     line-height: 1.2;
+}
+
+.action h4 a {
+    color: #3f3b3f;
 }
 
 @media screen and (max-width: 479px) {
@@ -383,11 +396,12 @@ header .headlines h3 {
     }
 }
 .action .email_signup button {
+    background: #f11010;
+    transition: background-color .3s;
     width: 100%;
-    background: #348899;
 }
 .action .email_signup button:hover {
-    background: #3b9cb0;
+    background: #e81111;
 }
 .action .or {
     display: inline-block;
@@ -422,7 +436,7 @@ header .headlines h3 {
 }
 .action span.disclaimer {
     clear: both;
-    color: #979C9C;
+    color: #3f3b3f;
     display: block;
     font-size: 15px;
     line-height: 1.4;
@@ -541,7 +555,7 @@ p.explanation {
 
 section {
     color: #222;
-    padding: 42px 0px 25px 0px;
+    padding: 16px 0px;
 }
 
 section a {
@@ -568,13 +582,14 @@ section hr {
     margin-bottom: 35px;
 }
 section p {
-    max-width: 800px;
+    color: #9dbdc6;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
     margin: 0px auto 25px auto;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 24px;
+    max-width: 800px;
     padding: 0 32px;
+    text-align: center;
 }
 section ul {
     font-size: 16px;
@@ -602,12 +617,12 @@ section p strong, header p strong, section ul strong {
     font-weight: bold;
 }
 section button.add-your-name {
-    background-color: #348899;
-    margin: 8px 0 0;
+    background-color: #9dbdc6;
+    margin: 24px 0 0;
     padding: 0 32px;
 }
 section button.add-your-name:hover {
-    background-color: #3b9cb0;
+    background-color: #697F87;
 }
 .share {
     border-radius: 60px;
@@ -1330,7 +1345,7 @@ section.scorecard div.grades div.candidates div.candidate img {
 }
 
 section.scorecard div.grades div.candidates div.candidate div.bar {
-    
+
 }
 
 section.scorecard div.grades div.disclaimer {
