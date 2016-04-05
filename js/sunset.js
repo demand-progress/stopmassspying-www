@@ -168,9 +168,13 @@ document.querySelector('a.the-letter').addEventListener('click', function(e) {
     modal_show('letter');
 });
 
-document.querySelector('button.add-your-name').addEventListener('click', function(e) {
+$('.animated-scroll').on('click', function(e) {
     e.preventDefault();
-    location.hash = 'add-your-name';
+
+    var target = $(e.target).data('target');
+    $('html, body').stop().animate({
+        scrollTop: $(target).offset().top,
+    }, 640);
 });
 
 function removeNode(target) {
