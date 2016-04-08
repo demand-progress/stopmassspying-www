@@ -1055,9 +1055,14 @@ div.social-buttons a.email {
     background-image: url(../images/social/icon-email.gif);
 }
 
+body.thanks-page {
+    background-color: #22242D;
+}
+
 section.midnight-share-train {
     background-color: #22242D;
-    margin: 32px 0 0;
+    border: none;
+    margin: 0 0 0;
 }
 
 section.midnight-share-train a:hover {
