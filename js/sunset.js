@@ -37,9 +37,9 @@ if (navigator.userAgent.match(/Android 2\.3/)) {
 
 
 // Fill in dynamic form fields
-document.querySelector('[name=action_user_agent]').value = navigator.userAgent;
-document.querySelector('[name=source]').value = StaticKit.query.source;
-document.querySelector('[name=url]').value = location.href;
+$('[name=action_user_agent]').val(navigator.userAgent);
+$('[name=source]').val(StaticKit.query.source);
+$('[name=url]').val(location.href);
 
 
 
@@ -48,7 +48,7 @@ var requiredFields = [
     'postcode',
 ];
 
-document.querySelector('.email_signup form').addEventListener('submit', function(e) {
+$('.email_signup form').on('submit', function(e) {
     for (var i = 0; i < requiredFields.length; i++) {
         var field = requiredFields[i];
 
@@ -163,7 +163,7 @@ for (var i = 0; i < ems.length; i++) {
     }, false);
 }
 
-document.querySelector('a.the-letter').addEventListener('click', function(e) {
+$('a.the-letter').on('click', function(e) {
     e.preventDefault();
     modal_show('letter');
 });
@@ -260,6 +260,9 @@ window.onActionKitCount = onActionKitCount;
 
 function createCounter(size) {
     var wrapperEl = document.querySelector('.action-wrapper');
+    if (!wrapperEl) {
+        return;
+    }
     wrapperEl.className += ' counter-is-visible';
 
     var counterDestinationLength = size.toString().length;
