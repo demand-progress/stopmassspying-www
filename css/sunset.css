@@ -198,7 +198,8 @@ header .headlines {
     background-image: url(../images/temp-header.png);
     background-size: cover;
     padding: 28px 0 32px;
-    text-shadow: 0 0 24px rgba(0, 0, 0, 0.7);
+    border-bottom: 3px solid #697f87;
+    border-bottom: 3px solid #334;
 }
 header .headlines .fade-wrapper {
     height: 75px;
@@ -213,28 +214,32 @@ header .headlines .fade {
     width: 100%;
 }
 header .headlines h1 {
+    background-color: rgba(150, 45, 62, 0.91);
     color: #daeaef;
     display: inline-block;
     font-size: 54px;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0;
+    margin: 2px 0;
     padding: 8px 16px;
 }
 header .headlines h2 {
+    background-color: rgba(150, 45, 62, 0.91);
     color: #daeaef;
     display: inline-block;
     font-size: 48px;
     font-weight: bold;
-    margin: 0;
+    margin: 2px 0;
     padding: 8px 16px;
 }
 header .headlines h3 {
-    color: #f11010;
+    background-color: rgba(105, 127, 135, 0.91);
+    color: #daeaef;
     display: inline-block;
     font-size: 28px;
+    font-style: italic;
     font-weight: bold;
-    margin: 0;
+    margin: 2px 0;
     padding: 8px 16px;
 }
 
