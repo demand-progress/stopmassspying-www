@@ -5,7 +5,7 @@
 
 // Share text
 var DOMAIN = "dontsellourhomestowallstreet.org";
-var TWEET_TEXT = "I just called on the presidential candidates to lay out a concrete plan to #FightBigMoney in politics! Join here: http://" + DOMAIN + "/?source=${source}";
+var TWEET_TEXT = "Tell @SecretaryCastro: Stop selling our neighborhoods to Wall Street! https://" + DOMAIN + "/?source=${source}";
 var EMAIL_SUBJECT = "Sign this petition to fight big money in politics?";
 var EMAIL_BODY = "Hi,\
 \n\n\
@@ -40,8 +40,6 @@ if (navigator.userAgent.match(/Android 2\.3/)) {
 $('[name=action_user_agent]').val(navigator.userAgent);
 $('[name=source]').val(StaticKit.query.source);
 $('[name=url]').val(location.href);
-
-
 
 var requiredFields = [
     'email',
@@ -78,7 +76,7 @@ $('.email_signup form').on('submit', function(e) {
 
     // modal_show('thank-you');
     // document.querySelector('input[type=tel]').focus();
-}, false);
+});
 
 function modal_show(id) {
     var overlayNode = document.getElementById(id);
