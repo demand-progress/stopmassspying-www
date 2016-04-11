@@ -282,6 +282,10 @@ function createCounter(size) {
 fetchActionKitCount();
 // shuffleLogos();
 
+$(function() {
+    FastClick.attach(document.body);
+});
+
 
 
 })(); // End closure
