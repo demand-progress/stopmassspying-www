@@ -196,21 +196,10 @@ header p.protest {
 header .headlines {
     background-image: url(../images/background-header.jpg);
     background-size: cover;
+    background-position: center 7%;
     padding: 28px 0 32px;
     border-bottom: 3px solid #697f87;
     border-bottom: 3px solid #313131;
-}
-header .headlines .fade-wrapper {
-    height: 75px;
-    position: relative;
-    width: 100%;
-}
-header .headlines .fade {
-    /*background-image: url(../images/bg-gradient-fade.png);*/
-    height: 75px;
-    position: absolute;
-    top: 2px;
-    width: 100%;
 }
 header .headlines h1 {
     background-color: rgba(241, 16, 16, 0.91);
@@ -246,21 +235,24 @@ header .headlines h3 br.phones {
     display: none;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1019px) {
+    header .headlines h1,
+    header .headlines h2,
+    header .headlines h3 {
+        padding: 4px 10px;
+    }
+
     header .headlines h1 {
         font-size: 24px;
         line-height: 1.2;
-        padding: 4px 16px;
     }
 
     header .headlines h2 {
         font-size: 22px;
-        padding: 4px 16px;
     }
 
     header .headlines h3 {
         font-size: 16px;
-        padding: 4px 16px;
     }
 
     header .hide-on-mobile {
@@ -269,18 +261,30 @@ header .headlines h3 br.phones {
 }
 
 @media screen and (max-width: 619px) {
+    header .headlines {
+        background-position: unset;
+    }
+    header .headlines h1,
+    header .headlines h2,
+    header .headlines h3 {
+        padding: 4px 0;
+    }
+
     header .headlines h1 {
         font-size: 18px;
+        width: 295px;
     }
 
     header .headlines h2 {
-        font-size: 17px;
+        font-size: 15px;
+        width: 160px;
     }
 
     header .headlines h3 {
-        font-size: 15px;
+        font-size: 12px;
         line-height: 1.4;
         margin: 0 auto;
+        width: 160px;
     }
 
     header .headlines h3 br.phones {
@@ -1016,7 +1020,7 @@ div.social-buttons {
     z-index: 999;
 }
 
-@media screen and (max-width: 1100px) {
+@media (max-width: 1100px), (max-height: 500px)  {
     div.social-buttons {
         text-indent: 999px;
         width: 33px;
