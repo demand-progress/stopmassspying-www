@@ -36,12 +36,11 @@ a:hover {
     color: #eee;
 }
 body {
-    background: #3f3b3f;
-    /*background-image: url(../images/cream.png);*/
+    background-color: #3f3b3f;
     background-size: 160px;
     font-family: "Open Sans";
-    text-align: center;
     min-width: 320px;
+    text-align: center;
 }
 strong {
     font-weight: bold;
