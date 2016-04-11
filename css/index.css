@@ -463,7 +463,7 @@ header .headlines h3 br.phones {
 }
 
 .action-wrapper .counter {
-    background-color: #9dbdc6;
+    background-color: #daeaef;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     display: none;
     height: 100px;
@@ -535,15 +535,16 @@ p.explanation {
 }
 
 .protest {
-    background-image: url(../images/temp-nyse.png);
+    background-image: url(../images/background-more-info.jpg);
     background-size: cover;
+    background-position: top center;
     height: 460px;
     width: 100%;
 }
 
 .protest h4 {
-    background-color: #697f87;
-    color: #9dbdc6;
+    background-color: rgba(105, 127, 135, 0.91);
+    color: #f11010;
     display: inline-block;
     font-size: 42px;
     font-weight: bold;
