@@ -1282,112 +1282,31 @@ h3.nopad {
     color: #3b9cb0;
 }
 
-/*
-Scorecard
-*/
-section.scorecard {
-
+.photo-credits {
+    background-color: #eee;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 32px;
 }
 
-section.scorecard div.intro {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-section.scorecard div.intro h3 {
-    background-color: #348899;
-    border-bottom: 7px solid #962d3e;
-    border-radius: 12px 12px 0 0;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-    color: #f6f4ea;
-    font-size: 32px;
+.photo-credits h4 {
+    color: #777;
+    font-size: 18px;
     font-weight: 400;
-    height: 106px;
-    letter-spacing: 0;
-    margin: 0;
-    padding: 19px 0 0;
-    position: relative;
-    z-index: 1;
+    margin: 0 0 16px;
 }
 
-section.scorecard div.intro h3 strong {
-    display: block;
-    font-weight: 600;
-    padding: 4px 0 0;
+.photo-credits p {
+    font-weight: 300;
+    margin: 0 0 16px;
 }
 
-section.scorecard div.intro div.description {
-    background-color: #fff;
-    color: #353535;
-    padding: 20px 50px 50px;
-    text-align: left;
+.photo-credits p a {
+    color: #999;
+    transition: color 0.3s;
 }
 
-section.scorecard div.intro div.description h4 {
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
-    letter-spacing: 0.5px;
-    margin: 0 0 15px;
-}
-
-section.scorecard div.intro div.description h4 span {
-    color: #353535;
-}
-
-section.scorecard div.grades {
-    margin: 0 auto;
-    max-width: 700px;
-}
-
-section.scorecard div.grades h3 {
-    background-color: #348899;
-    border-bottom: 7px solid #962d3e;
-    border-radius: 12px 12px 0 0;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-    color: #f6f4ea;
-    font-size: 28px;
-    font-weight: 700;
-    height: 76px;
-    letter-spacing: 0;
-    margin: -15px 0 0;
-    padding: 23px 0 0;
-    position: relative;
-    z-index: 1;
-}
-
-section.scorecard div.grades div.candidates {
-    background-color: #fff;
-    padding: 21px 50px 0;
-}
-
-section.scorecard div.grades div.candidates div.candidate {
-    box-shadow: inset -1px 2px 3px rgba(0, 0, 0, 0.14);
-    cursor: pointer;
-    min-height: 142px;
-    position: relative;
-}
-
-section.scorecard div.grades div.candidates div.candidate img {
-    display: block;
-    height: 142px;
-    width: 142px;
-    position: absolute;
-    left: 0;
-}
-
-section.scorecard div.grades div.candidates div.candidate div.bar {
-
-}
-
-section.scorecard div.grades div.disclaimer {
-    background-color: #fff;
-}
-
-section.scorecard div.grades div.disclaimer div.description {
-    margin: 0 auto;
-    max-width: 530px;
-    padding: 34px 30px 25px;
-    text-align: left;
+.photo-credits p a:hover {
+    color: #777;
 }
