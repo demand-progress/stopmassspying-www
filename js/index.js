@@ -6,14 +6,12 @@
 // Share text
 var DOMAIN = "dontsellourhomestowallstreet.org";
 var TWEET_TEXT = "Tell @SecretaryCastro: Stop selling our neighborhoods to Wall Street! https://" + DOMAIN + "/?source=${source}";
-var EMAIL_SUBJECT = "Sign this petition to fight big money in politics?";
-var EMAIL_BODY = "Hi,\
+var EMAIL_SUBJECT = "I just signed this:";
+var EMAIL_BODY = "Hi – I just signed this petition to Secretary Julian Castro urging him to end the Wall Street giveaway at the Department of Housing and Urban Development. \
 \n\n\
-I just signed the petition telling the presidential candidates to lay out a concrete, serious plan to fight big money in politics.\
+The department has been selling our neighborhoods to Wall Street – with 98% of overdue mortgages getting sold to huge financial institutions – even though the department promised to sell to nonprofit community organizations. \
 \n\n\
-The only way we'll make progress is if candidates know the American people are demanding a change. Could you sign, too?\
-\n\n\
-http://www." + DOMAIN + "/?source=${source}\
+Could you sign too? http://" + DOMAIN + "/?source=${source} \
 \n\n\
 Thanks!";
 

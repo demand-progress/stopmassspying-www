@@ -294,12 +294,10 @@ header .headlines .phones {
     header .headlines h3 {
         font-size: 12px;
         line-height: 1.4;
-        margin: 0 auto;
     }
 
     header .headlines .phones {
         display: block;
-        margin: 0 0 2px;
     }
 
     header .headlines .tablet {
