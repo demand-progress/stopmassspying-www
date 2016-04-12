@@ -151,11 +151,12 @@ for (var i = 0; i < ems.length; i++) {
     ems[i].addEventListener('click', function(e) {
         e.preventDefault();
 
-        window.location.href =
+        window.open(
             'mailto:?subject=' + encodeURIComponent(EMAIL_SUBJECT) +
             '&body=' + encodeURIComponent(
                 EMAIL_BODY.replace('${source}', StaticKit.query.cleanedSource + '-emailshare')
-            );
+            )
+        );
     }, false);
 }
 
