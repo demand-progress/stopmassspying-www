@@ -231,11 +231,15 @@ header .headlines h3 {
     padding: 8px 16px;
 }
 
-header .headlines h3 br.phones {
+header .headlines .phones {
     display: none;
 }
 
 @media screen and (max-width: 1019px) {
+    header .headlines {
+        padding: 56px 0 64px;
+    }
+
     header .headlines h1,
     header .headlines h2,
     header .headlines h3 {
@@ -260,6 +264,12 @@ header .headlines h3 br.phones {
     }
 }
 
+@media screen and (max-width: 809px) {
+    header .headlines {
+        padding: 28px 0 32px;
+    }
+}
+
 @media screen and (max-width: 619px) {
     header .headlines {
         background-position: unset;
@@ -267,7 +277,7 @@ header .headlines h3 br.phones {
     header .headlines h1,
     header .headlines h2,
     header .headlines h3 {
-        padding: 4px 0;
+        padding: 4px 8px;
     }
 
     header .headlines h1 {
@@ -277,18 +287,21 @@ header .headlines h3 br.phones {
 
     header .headlines h2 {
         font-size: 15px;
-        width: 160px;
     }
 
     header .headlines h3 {
         font-size: 12px;
         line-height: 1.4;
         margin: 0 auto;
-        width: 160px;
     }
 
-    header .headlines h3 br.phones {
+    header .headlines .phones {
         display: block;
+        margin: 0 0 2px;
+    }
+
+    header .headlines .tablet {
+        display: none;
     }
 }
 
