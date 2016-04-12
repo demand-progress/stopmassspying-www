@@ -278,7 +278,7 @@ function createCounter(size) {
     el.style.width = counterDestinationLength * 30 + Math.floor((counterDestinationLength - 1) / 3) * 7 + 'px';
 }
 
-fetchActionKitCount();
+// fetchActionKitCount();
 // shuffleLogos();
 
 $(function() {
