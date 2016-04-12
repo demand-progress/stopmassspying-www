@@ -260,7 +260,6 @@ function createCounter(size) {
     if (!wrapperEl) {
         return;
     }
-    wrapperEl.className += ' counter-is-visible';
 
     var counterDestinationLength = size.toString().length;
     var counterStartingNumber = Math.pow(10, counterDestinationLength - 1);
