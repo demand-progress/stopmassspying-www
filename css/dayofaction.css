@@ -198,7 +198,7 @@ header p.protest {
 header .headlines {
     background-image: url(../images/background-header.jpg);
     background-size: cover;
-    background-position: center bottom;
+    background-position: center 7%;
     padding: 28px 0 32px;
     border-bottom: 3px solid #697f87;
     border-bottom: 3px solid #313131;
@@ -566,7 +566,8 @@ p.explanation {
 .protest {
     background-image: url(../images/background-more-info.jpg);
     background-size: cover;
-    background-position: center bottom;
+    background-position: top center;
+    height: 460px;
     width: 100%;
 }
 
@@ -576,10 +577,10 @@ p.explanation {
     display: inline-block;
     font-size: 42px;
     font-weight: bold;
-    margin: 50px 0;
+    margin: 200px 0;
     line-height: 1.4;
     width: 100%;
-    padding: 8px 16px;
+    padding: 8px 38px;
     text-transform: uppercase;
 }
 
@@ -605,7 +606,7 @@ section a {
 }
 
 section a:hover {
-    color: #fff;
+    color: #3b9cb0;
 }
 
 section.dark {
@@ -678,33 +679,31 @@ section button.add-your-name:hover {
     background-color: #61767D;
 }
 .share {
-    background: #222;
     border-radius: 60px;
-    display: inline-block;
     padding: 10px 10px 0;
-    margin: 32px 0 0;
+    background: #222;
+    display: inline-block;
 }
 section .share {
-    margin: 28px 0 0;
+    margin: 0 0 22px;
 }
 .overlay .gutter .modal .share {
     background: #eee;
     margin: 20px auto 10px auto;
 }
 .share a {
-    border-radius: 20px;
-    color: white;
     display: inline-block;
-    font-size: 20px;
-    font-weight: 500;
+    width: 120px;
     height: 40px;
     line-height: 40px;
-    margin: 0px 10px 10px 10px;
-    padding-left: 30px;
     text-align: center;
+    color: white;
     text-decoration: none;
-    transition: 0.3s background-color;
-    width: 120px;
+    padding-left: 30px;
+    font-size: 20px;
+    margin: 0px 10px 10px 10px;
+    border-radius: 20px;
+    font-weight: 500;
 }
 .share a.facebook {
     background: #3B5999 url(../images/fb_white.png) 15px 8px no-repeat;
@@ -1298,7 +1297,7 @@ h3.nopad {
     margin: 0;
     clear: both;
     overflow: hidden;
-    padding: 32px 32px 64px;
+    padding: 32px;
 }
 
 .privacy a {
