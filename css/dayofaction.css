@@ -232,6 +232,16 @@ header .headlines h3 {
     margin: 2px 0;
     padding: 8px 16px;
 }
+header .headlines h4 {
+    background-color: #daeaef;
+    color: rgba(241, 16, 16, 0.91);
+    display: inline-block;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2px 0;
+    padding: 8px 16px;
+}
 
 header .headlines .phones {
     display: none;
@@ -244,7 +254,8 @@ header .headlines .phones {
 
     header .headlines h1,
     header .headlines h2,
-    header .headlines h3 {
+    header .headlines h3,
+    header .headlines h4 {
         padding: 4px 10px;
     }
 
@@ -259,6 +270,10 @@ header .headlines .phones {
 
     header .headlines h3 {
         font-size: 18px;
+    }
+
+    header .headlines h4 {
+        font-size: 24px;
     }
 
     header .hide-on-mobile {
@@ -282,6 +297,10 @@ header .headlines .phones {
 
     header .headlines h3 {
         font-size: 16px;
+    }
+
+    header .headlines h4 {
+        font-size: 18px;
     }
 }
 
@@ -309,6 +328,10 @@ header .headlines .phones {
         line-height: 1.4;
     }
 
+    header .headlines h4 {
+        font-size: 16px;
+    }
+
     header .headlines .phones {
         display: block;
     }
@@ -321,7 +344,7 @@ header .headlines .phones {
 .hide-on-mobile {
     display: none;
 }
-
+/*
 .action-wrapper {
     margin: 0 0 48px;
     position: relative;
@@ -592,7 +615,7 @@ p.explanation {
     .protest h4 {
         font-size: 32px;
     }
-}
+}*/
 
 section {
     color: #222;
@@ -601,12 +624,12 @@ section {
 }
 
 section a {
-    color: #348899;
+    color: #daeaef;
     font-weight: bold;
 }
 
 section a:hover {
-    color: #3b9cb0;
+    color: #9dbdc6;
 }
 
 section.dark {
@@ -650,7 +673,7 @@ section ul {
     padding: 0 32px;
     text-align: left;
 }
-section ul li {
+/*section ul li {
     margin: 0 64px 16px 100px;
 }
 section ul li .fa {
@@ -662,11 +685,12 @@ section ul li .fa {
     section ul li {
         margin: 0 16px 16px 52px;
     }
-}
+}*/
 section p strong, header p strong, section ul strong {
     font-weight: bold;
 }
-section button.add-your-name {
+
+/*section button.add-your-name {
     background-color: #697f87;
     border-radius: 3px;
     color: #fff;
@@ -677,15 +701,15 @@ section button.add-your-name {
 }
 section button.add-your-name:hover {
     background-color: #61767D;
-}
+}*/
 .share {
-    border-radius: 60px;
+    /*border-radius: 60px;*/
     padding: 10px 10px 0;
-    background: #222;
+    /*background: #222;*/
     display: inline-block;
 }
 section .share {
-    margin: 0 0 22px;
+    margin: 0 0 42px;
 }
 .overlay .gutter .modal .share {
     background: #eee;
@@ -693,16 +717,17 @@ section .share {
 }
 .share a {
     display: inline-block;
-    width: 120px;
+    /*width: 120px;*/
     height: 40px;
     line-height: 40px;
     text-align: center;
     color: white;
     text-decoration: none;
-    padding-left: 30px;
+    padding-left: 55px;
+    padding-right: 20px;
     font-size: 20px;
     margin: 0px 10px 10px 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-weight: 500;
 }
 .share a.facebook {
@@ -785,7 +810,7 @@ section .share {
     font-size: .8em;
 }
 
-.overlay {
+/*.overlay {
     position: fixed;
     left: 0px;
     top: 0px;
