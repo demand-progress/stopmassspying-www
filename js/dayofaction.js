@@ -5,7 +5,7 @@
 
 // Share text
 var DOMAIN = "dontsellourhomestowallstreet.org/dayofaction";
-var TWEET_TEXT = "5/17, I’m joining communities across the country to tell @SecretaryCastro: STOP the sale of our homes to Wall St! #DontSellOurHomes";
+var TWEET_TEXT = "On 5/17, I’m joining communities across the country to tell @SecretaryCastro: STOP the sale of our homes to Wall St! #DontSellOurHomes";
 var EMAIL_SUBJECT = "I just signed this:";
 var EMAIL_BODY = "Hi – I just signed this petition to Secretary Julián Castro urging him to end the Wall Street giveaway at the Department of Housing and Urban Development. \
 \n\n\
