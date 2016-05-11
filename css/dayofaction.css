@@ -233,7 +233,7 @@ header .headlines h3 {
     padding: 8px 16px;
 }
 header .headlines h4 {
-    background-color: #daeaef;
+    background-color: rgba(218,234,239,0.91);
     color: rgba(241, 16, 16, 0.91);
     display: inline-block;
     font-size: 30px;
