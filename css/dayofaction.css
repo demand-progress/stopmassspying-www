@@ -729,6 +729,10 @@ section .share {
     margin: 0px 10px 10px 10px;
     border-radius: 10px;
     font-weight: 500;
+    transition: 0.3s background-color;
+}
+.share a:hover {
+    color: #fff;
 }
 .share a.facebook {
     background: #3B5999 url(../images/fb_white.png) 15px 8px no-repeat;
@@ -750,6 +754,16 @@ section .share {
 }
 .share a.email:hover {
     background-color: #10A526;
+}
+@media (max-width: 420px) {
+    .share a.facebook,
+    .share a.twitter {
+        background-position: 15px 50%;
+        width: auto;
+        line-height: 1.4;
+        height: auto;
+        padding: 8px 20px 8px 55px;
+    }
 }
 .logos {
     background-color: #fff ;
@@ -1065,6 +1079,7 @@ section .share {
 }
 
 div.social-buttons {
+    display: none;
     height: 115px;
     left: 0;
     overflow: hidden;
