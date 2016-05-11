@@ -678,6 +678,9 @@ section p {
     padding: 0 32px;
     text-align: left;
 }
+section p.centered {
+    text-align: center;
+}
 section p.cities {
     padding: 12px 72px 0;
 }
