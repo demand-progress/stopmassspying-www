@@ -36,8 +36,8 @@ a:hover {
     color: #eee;
 }
 body {
-    background-color: #3f3b3f;
-    background-size: 160px;
+    background: #161616 url(../images/background-shattered.jpg) no-repeat center top;
+    background-size: 100% auto;
     font-family: "Open Sans";
     min-width: 320px;
     text-align: center;
@@ -76,7 +76,6 @@ h3 {
 }
 h4 {
     text-align: center;
-
     color: #f0d88d;
     font-size: 38px;
     letter-spacing: 1px;
@@ -149,14 +148,11 @@ img.demo {
     height: auto;
     margin-bottom: 10px;
 }
-header {
-}
 header .desktop p {
-    font-size: 17px;
-    max-width: 890px;
-    padding-top: 32px;
+    /*font-size: 17px;*/
+    max-width: 690px;
+    padding: 0 0 20px;
 }
-
 header .mobile .fight-back {
     padding-bottom: 48px;
 }
@@ -169,7 +165,7 @@ header em {
     font-style: italic;
 }
 header p {
-    color: #9dbdc6;
+    color: #fafff2;
     font-size: 19px;
     font-weight: 400;
     line-height: 1.4;
@@ -196,16 +192,15 @@ header p.protest {
     text-align: left;
 }
 header .headlines {
-    background-image: url(../images/background-header.jpg);
-    background-size: cover;
-    background-position: center 7%;
-    padding: 28px 0 32px;
-    border-bottom: 3px solid #697f87;
-    border-bottom: 3px solid #313131;
+    background-image: url(../images/eyecon-grey.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 35%;
+    padding: 28px 0 52px;
 }
 header .headlines h1 {
-    background-color: rgba(241, 16, 16, 0.91);
-    color: #daeaef;
+    background-color: #5bba0e;
+    color: #fafff2;
     display: inline-block;
     font-size: 46px;
     font-weight: bold;
@@ -214,8 +209,8 @@ header .headlines h1 {
     padding: 8px 16px;
 }
 header .headlines h2 {
-    background-color: rgba(241, 16, 16, 0.91);
-    color: #daeaef;
+    background-color: #5bba0e;
+    color: #fafff2;
     display: inline-block;
     font-size: 42px;
     font-weight: bold;
@@ -223,8 +218,7 @@ header .headlines h2 {
     padding: 8px 16px;
 }
 header .headlines h3 {
-    background-color: rgba(105, 127, 135, 0.91);
-    color: #daeaef;
+    color: #fafff2;
     display: inline-block;
     font-size: 20px;
     font-style: italic;
@@ -328,7 +322,7 @@ header .headlines .phones {
 }
 
 .action-wrapper .red-bar {
-    background-color: #697f87;
+    background-color: #262626;
     height: calc(100% - 270px);
     margin-top: 135px;
     position: absolute;
@@ -336,7 +330,7 @@ header .headlines .phones {
 }
 
 .action {
-    background: #9dbdc6;
+    background: #5bba0e;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     margin: 35px auto 0;
     max-width: 600px;
@@ -346,7 +340,7 @@ header .headlines .phones {
 }
 
 .action h2 {
-    color: #3f3b3f;
+    color: #262626;
     font-size: 36px;
     letter-spacing: normal;
     padding: 0px 0px 16px;
@@ -434,12 +428,12 @@ header .headlines .phones {
     }
 }
 .action .email_signup button {
-    background: #f11010;
+    background: #0244ca;
     transition: background-color .3s;
     width: 100%;
 }
 .action .email_signup button:hover {
-    background: #e81111;
+    background: #033caf;
 }
 .action .or {
     display: inline-block;
@@ -492,7 +486,7 @@ header .headlines .phones {
 }
 
 .action-wrapper .counter {
-    background-color: #daeaef;
+    background-color: #daefe5;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     display: none;
     height: 100px;
@@ -618,11 +612,11 @@ section h2 {
     margin-bottom: 35px;
 }
 section h4 {
-    color: #daeaef;
+    color: #5bba0e;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: bold;
+    letter-spacing: 2px;
     line-height: 1.3;
-    margin-bottom: 35px;
     margin-top: 8px;
 }
 section hr {
@@ -632,14 +626,19 @@ section hr {
     margin-bottom: 35px;
 }
 section p {
-    color: #9dbdc6;
+    background-color: #262626;
+    color: #fafff2;
     font-size: 19px;
     font-weight: 400;
     line-height: 1.4;
-    margin: 0px auto 25px auto;
+    margin: 0px auto;
     max-width: 800px;
-    padding: 0 32px;
+    padding: 12px 32px;
     text-align: left;
+}
+section p .number {
+    color: #5bba0e;
+    font-weight: bold;
 }
 section ul {
     font-size: 16px;
@@ -667,7 +666,7 @@ section p strong, header p strong, section ul strong {
     font-weight: bold;
 }
 section button.add-your-name {
-    background-color: #697f87;
+    background-color: #0244ca;
     border-radius: 3px;
     color: #fff;
     margin: 24px 0 0;
@@ -676,7 +675,7 @@ section button.add-your-name {
     transition: background-color 0.3s;
 }
 section button.add-your-name:hover {
-    background-color: #61767D;
+    background-color: #033caf;
 }
 .share {
     border-radius: 60px;
@@ -1317,6 +1316,7 @@ h3.nopad {
     font-size: 14px;
     line-height: 1.4;
     padding: 32px;
+    display: none;
 }
 
 .photo-credits h4 {
