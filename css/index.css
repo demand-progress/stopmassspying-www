@@ -192,10 +192,10 @@ header p.protest {
     text-align: left;
 }
 header .headlines {
-    background-image: url(../images/eyecon-grey.png);
+    background-image: url(../images/eyecon-grey2.png);
     background-position: left top;
     background-repeat: no-repeat;
-    background-size: 35%;
+    background-size: contain;
     padding: 28px 0 52px;
 }
 header .headlines h1 {
