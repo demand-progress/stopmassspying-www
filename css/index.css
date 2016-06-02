@@ -340,7 +340,7 @@ header .headlines .phones {
 }
 
 .action h2 {
-    color: #262626;
+    color: #161616;
     font-size: 36px;
     letter-spacing: normal;
     padding: 0px 0px 16px;
@@ -354,13 +354,13 @@ header .headlines .phones {
 }
 
 .action h4 {
-    color: #3f3b3f;
+    color: #344e30;
     font-size: 20px;
     line-height: 1.2;
 }
 
 .action h4 a {
-    color: #3f3b3f;
+    color: #344e30;
 }
 
 @media screen and (max-width: 479px) {
@@ -589,18 +589,19 @@ p.explanation {
 }
 
 section {
+    background-color: #262626;
     color: #222;
     padding: 32px 0 48px;
     border-bottom: 3px solid #ccc;
 }
 
 section a {
-    color: #348899;
+    color: #5bba0e;
     font-weight: bold;
 }
 
 section a:hover {
-    color: #3b9cb0;
+    color: #6fde14;
 }
 
 section.dark {
@@ -626,7 +627,6 @@ section hr {
     margin-bottom: 35px;
 }
 section p {
-    background-color: #262626;
     color: #fafff2;
     font-size: 19px;
     font-weight: 400;
@@ -669,7 +669,7 @@ section button.add-your-name {
     background-color: #0244ca;
     border-radius: 3px;
     color: #fff;
-    margin: 24px 0 0;
+    margin: 44px 0 0;
     padding: 0 32px;
     text-transform: none;
     transition: background-color 0.3s;
@@ -730,13 +730,14 @@ section .share {
     margin: 0;
     padding: 48px 0 0;
     overflow: hidden;
+    display: none;
 }
 .logos .clamp {
     margin: 0 auto;
     max-width: 970px;
 }
 .logos h4 {
-    color: #348899;
+    color: #5bba0e;
     font-size: 24px;
     padding: 0 0 28px;
 }
@@ -835,7 +836,7 @@ section .share {
     opacity: .6;
 }
 .overlay .modal h1 {
-    background: #697f87;
+    background: #0244ca;
     color: #daeaef;
     text-align: center;
     padding: 30px 16px;
@@ -1118,7 +1119,7 @@ section.midnight-share-train p {
 
 /* Checkbox */
 .squaredFour {
-    color: #3f3b3f;
+    color: #344e30;
     display: block;
     font-size: 16px;
     line-height: 1.2;
@@ -1300,14 +1301,14 @@ h3.nopad {
 }
 
 .privacy a {
-    color: #348899;
+    color: #5bba0e;
     text-decoration: none;
     transition: color 0.3s;
     font-weight: bold;
 }
 
 .privacy a:hover {
-    color: #3b9cb0;
+    color: #6fde14;
 }
 
 .photo-credits {
