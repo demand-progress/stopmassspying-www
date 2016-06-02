@@ -167,12 +167,13 @@ header em {
 header p {
     color: #fafff2;
     font-size: 19px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.4;
     margin: 0px auto;
     max-width: 860px;
     padding: 0 38px;
     text-align: center;
+    word-spacing: 1px;
 }
 header .mobile p {
     margin: 0 0 42px;
@@ -629,12 +630,13 @@ section hr {
 section p {
     color: #fafff2;
     font-size: 19px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.4;
     margin: 0px auto;
     max-width: 800px;
     padding: 12px 32px;
     text-align: left;
+    word-spacing: 1px;
 }
 section p .number {
     color: #5bba0e;
