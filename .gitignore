@@ -1,1 +1,4 @@
+*.ai
+design/
+node_modules/
 notes/

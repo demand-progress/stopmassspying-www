@@ -338,7 +338,7 @@ header .headlines .phones {
 }
 
 .action {
-    background: #5bba0e;
+    background: rgb(79, 162, 11);
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     margin: 16px auto 0;
     max-width: 600px;
@@ -362,7 +362,7 @@ header .headlines .phones {
 }
 
 .action h4 {
-    color: #fff;
+    color: #efe;
     font-size: 18px;
     line-height: 1.2;
 }
@@ -512,8 +512,7 @@ header .headlines .phones {
 
 .action-wrapper .counter .label {
     clear: both;
-    color: #333542;
-    font-weight: bold;
+    color: #efe;
 }
 
 button {
@@ -1129,7 +1128,7 @@ section.midnight-share-train p {
 
 /* Checkbox */
 .squaredFour {
-    color: #fff;
+    color: #eee;
     display: block;
     font-size: 14px;
     line-height: 1.3;

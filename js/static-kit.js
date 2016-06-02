@@ -1,14 +1,18 @@
+import $ from 'jquery';
+import each from 'lodash/each';
+
+
 var StaticKit = {};
 
 StaticKit.copy = {
     zipErrorAlert: 'Please enter a valid ZIP code.',
 };
 
-StaticKit.query = (function () {
+StaticKit.query = (f => {
     var pairs = location.search.slice(1).split('&');
 
     var result = {};
-    pairs.forEach(function (pair) {
+    each(pairs, pair => {
         pair = pair.split('=');
         result[pair[0]] = decodeURIComponent(pair[1] || '');
     });
@@ -36,23 +40,30 @@ try {
     sessionStorage.savedSource = StaticKit.query.source;
 } catch (e) {}
 
-StaticKit.fillForm = function (params) {
+StaticKit.fillForm = params => {
     for (var key in params) {
-        var el = document.querySelector('[name="' + key + '"]');
-        if (el) {
-            el.value = params[key];
+        var $el = $('[name="' + key + '"]');
+        if ($el.length > 0) {
+            $el.val(params[key]);
         }
     }
 }
 
-if (StaticKit.query.error_zip) {
-    StaticKit.fillForm(StaticKit.query);
-    var el = document.querySelector('[name="zip"]');
-    if (el) {
-        el.value = '';
-        el.focus();
+StaticKit.start = f => {
+    if (StaticKit.query.error_zip) {
+        StaticKit.fillForm(StaticKit.query);
+
+        var $el = $('[name="zip"]');
+        if ($el.length > 0) {
+            $el.val('');
+            $el.focus();
+        }
+
+        setTimeout(
+            f => alert(StaticKit.copy.zipErrorAlert),
+            250
+        );
     }
-    setTimeout(function () {
-        alert(StaticKit.copy.zipErrorAlert);
-    }, 250);
 }
+
+export default StaticKit;
