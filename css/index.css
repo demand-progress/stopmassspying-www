@@ -341,14 +341,15 @@ header .headlines .phones {
     background: rgba(91,186,14,1);
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     margin: 16px auto 0;
-    max-width: 600px;
+    max-width: 651px;
     padding: 28px 60px;
     position: relative;
     z-index: 99;
 }
 
 .action h2 {
-    color: #010;
+    color: #020;
+    text-shadow: 3px 3px 14px rgba(0, 0, 0, 0.05);
     font-size: 28px;
     letter-spacing: normal;
     padding: 0px 0px 16px;
@@ -362,13 +363,15 @@ header .headlines .phones {
 }
 
 .action h4 {
-    color: #121;
+    color: #242;
+    text-shadow: 3px 3px 14px rgba(0, 0, 0, 0.05);
     font-size: 18px;
+    font-weight: 600;
     line-height: 1.2;
 }
 
 .action h4 a {
-    color: #121;
+    color: #242;
 }
 
 @media screen and (max-width: 479px) {
@@ -517,7 +520,7 @@ header .headlines .phones {
 
 .action-wrapper .counter .label {
     clear: both;
-    color: #efe;
+    color: #242;
 }
 
 button {
@@ -1133,11 +1136,13 @@ section.midnight-share-train p {
 
 /* Checkbox */
 .squaredFour {
-    color: #232;
+    color: #353;
+    text-shadow: 3px 3px 14px rgba(0, 0, 0, 0.05);
     display: block;
     font-size: 14px;
     line-height: 1.3;
     margin: 16px auto 0;
+    font-weight: 600;
     overflow: hidden;
     position: relative;
     text-align: left;

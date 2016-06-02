@@ -5,7 +5,7 @@ import StaticKit from './static-kit';
 var constants = {};
 
 // General
-constants.DOMAIN = 'savethefourth.net';
+constants.DOMAIN = 'stopmassspying.com';
 
 // Social
 constants.EMAIL_SUBJECT = 'Sign this petition: Tell the Senate to end warrantless snooping';

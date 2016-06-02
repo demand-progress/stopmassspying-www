@@ -7,8 +7,7 @@ import HomePage from './home-page';
 import Modal from './modal';
 import Polyfill from 'babel-polyfill';
 import StaticKit from './static-kit';
-// import ThanksPage from './thanks-page';
-// import ThanksSenatePage from './thanks-senate-page';
+import ThanksPage from './thanks-page';
 
 
 // FastClick for mobile
@@ -66,13 +65,9 @@ $(f => {
             HomePage.start();
             break;
 
-        // case 'thanks':
-        //     ThanksPage.start();
-        //     break;
-
-        // case 'thanks-senate':
-        //     ThanksSenatePage.start();
-        //     break;
+        case 'thanks':
+            ThanksPage.start();
+            break;
     }
 
     // Google Analytics

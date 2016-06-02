@@ -1,11 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
+
 <head>
-    <title>Thanks!</title>
+    <meta charset="utf-8">
+    <title>Thanks! | Stop Mass Spying</title>
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style -->
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Arvo:400,400italic,700">
+    <link rel="stylesheet" href="../css/thanks.css?v=2.0.23">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://savethefourth.net">
+
+    <!-- Twitter -->
+    <meta name="twitter:url" content="https://savethefourth.net">
+
+    <script>
+        // Check for outdated browsers
+        var isIE = navigator.userAgent.match(/MSIE (\d+)\./);
+        if (isIE) {
+            var version = +isIE[1];
+            if (version < 9) {
+                alert('Unfortunately your browser, Internet Explorer ' + version + ', is not supported.\nPlease visit the site with a modern browser like Firefox or Chrome.\nThanks!');
+                location.href = 'https://www.mozilla.org/en-US/firefox/';
+            }
+        }
+
+        if (navigator.userAgent.match(/Android 2\.3/)) {
+            alert('Unfortunately your browser, Android 2.3, is not supported.\nPlease visit the site with a modern browser like Firefox or Chrome.\nThanks!');
+        }
+    </script>
 </head>
-<body>
 
-Thanks for signing. The call page is still being built. :)
+<body data-page="thanks" class="variation-default">
+    <div class="floating-background"></div>
+    <header>
+        <div class="headlines">
+            <h1>Thank you for signing!</h1>
+        </div>
 
+        <div class="subtitle">
+            <span>
+                Now, please make an important phone call and tweet at the Senate
+            </span>
+        </div>
+
+        <div class="options-wrapper">
+            <div class="options">
+                <div class="call-wrapper">
+                    <div class="action">
+                        <h2>Call Your Senators:</h2>
+
+                        <form accept-charset="utf-8">
+                            <div class="form-wrapper">
+                                <div class="input-grid">
+                                    <input id="phone" name="phone" placeholder="Your number" type="tel" autocomplete="on" required="required" />
+                                    <div id="thanks">Thanks!</div>
+                                    <button type="submit">
+                                        <img class="phone" src="../images/Phone.svg" alt="" />
+                                        Call
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <span class="disclaimer">
+                            Or dial <a href="tel:628-222-7668">(628) 222-7668</a> to connect.
+                        </span>
+                    </div>
+
+                    <div class="description">
+                        <div>
+                            Enter your number here and we'll call and connect you with the offices of your Senators, Judiciary Chairman Chuck Grassley, and other Members of the Senate Judiciary — the committee that must pass this bill before it goes to a full vote in the Senate. We'll provide a script you can read from.
+                        </div>
+
+                        <br>
+
+                        <strong>
+                            It's easy, will only take a minute, and is the most powerful thing you can do to make a difference.
+                        </strong>
+                    </div>
+                </div>
+                <!-- .call-wrapper -->
+            </div>
+
+            <div class="subtitle tweet-prompt">
+                <div>
+                    Finally, please tweet at the Senate:
+                </div>
+            </div>
+
+            <div class="options">
+                <div class="tweet-wrapper">
+                    <div class="action">
+                        <form accept-charset="utf-8">
+                            <div class="form-wrapper">
+                                <div class="sample-tweet">
+                                    .<span class="handle">@localRep</span>
+                                    <span class="tweet-content">
+                                        stop blocking email privacy! It's time to pass the most popular bill in Congress <span class="link">#EmailPrivacyAct https://savethefourth.net</span>
+                                    </span>
+                                </div>
+
+                                <div id="thanks">Thanks!</div>
+                                <button type="submit">
+                                    <img class="twitter" src="../images/social/Twitter.svg" alt="" />
+                                    Post
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- .tweet-wrapper -->
+
+            </div>
+        </div>
+
+    </header>
+
+    <div class="overlay calling invisible" id="calling">
+        <div class="gutter">
+            <div class="modal">
+                <a class="close" href="#">×</a>
+
+                <h1></h1>
+
+                <p class="nopad">
+                    <span>
+                        We are going to connect you to your own representative first, and then to other key representatives whom we need to make sure vote the right way. <strong>Hit *</strong> to move from call to call, and you can hang up whenever you want to. 
+
+                        <br>
+                        <br>
+
+                        You can tell all of them: 
+
+                        <br>
+                        <br>
+
+                        <strong>
+                            "The NSA is still engaging in warrantless surveillance of Americans.  I urge you to support the Massie-Lofgren amendment to end backdoor surveillance."
+                        </strong>
+                    </span>
+
+                    <br>
+
+                    <div class="calling-wrapper">
+                        <h3>After your call(s), use the form to let us know how it went!</h3>
+                        <form action="#" method="get">
+                            <div class="wrapper">
+                                <h4>Who did you speak with?</h4>
+                                <input required="required" type="text" name="Who did you speak with?" id="who">
+                                <h4>How did it go?</h4>
+                                <input required="required" type="text" name="How did it go?" id="how">
+                                <br>
+                                <div id="thanks">Thank you!</div>
+                                <button type="submit" name="submit">Send Feedback</button>
+                            </div>
+                        </form>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Share Buttons -->
+    <div class="social-buttons">
+        <a target="_blank" href="share://Facebook" class="facebook">
+                Share
+            </a>
+
+        <a target="_blank" href="share://Twitter" class="twitter">
+                Tweet
+            </a>
+
+        <a href="share://Email" class="email">
+                Email
+            </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/bundle.js?v=2.0.23"></script>
+
+    <!--[if IE 9]>
+    <script src="../js/vendor/placeholders.min.js" async></script>
+    <script type="text/javascript">
+        console.log('IE9 detected!');
+    </script>
+	<![endif]-->
 </body>
+
 </html>

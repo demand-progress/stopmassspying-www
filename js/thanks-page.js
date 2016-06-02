@@ -1,15 +1,20 @@
 import $ from 'jquery';
+import clone from 'lodash/clone';
 import Constants from './constants';
 import each from 'lodash/each';
 import Modal from './modal';
 import sample from 'lodash/sample';
+import shuffle from 'lodash/shuffle';
 import StaticKit from './static-kit';
+import uniq from 'lodash/uniq';
 
 
-var campaign = {
-    callCampaign : 'ecpa-goodlatte',
-    twitterIds   : [ 'RepGoodlatte' ],
-    twitterText  : 'Pass the most popular bill in Congress! #EmailPrivacyAct https://savethefourth.net',
+var state = {
+    bioguideIDs  : [],
+    callCampaign : 'savethefourthnet-senate-default',
+    twitterIDs   : [],
+    twitterText  : 'support the effort to #ReformECPA & urge leadership to swiftly pass a clean bill! https://savethefourth.net',
+    zip: '',
 };
 
 async function start() {
@@ -18,16 +23,22 @@ async function start() {
 
     // Update campaign
     var zip = getSavedZip();
+    state.zip = zip;
     await updateCampaignWithZip(zip);
     tweetToAdditionalMember();
 
     // Update suggested Tweet
-    $('.tweet-content').html(campaign.twitterText.replace('#', '<span class="link">#') + '</span>');
+    $('.tweet-content').html(
+        state.twitterText
+            .replace(/#(\w+)/g, '<span class="link">#$1</span>')
+            .replace(/http([^ ]+)/g, '<span class="link">http$1</span>')
+    );
 
     // Update forms
-    $('.sample-tweet .handle').text('@' + campaign.twitterIds.join(' @'));
+    $('.sample-tweet .handle').text('@' + state.twitterIDs.join(' @'));
 
     // Show forms
+    $('body').addClass('ready');
     $('.options').addClass('ready');
     $('.tweet-prompt').addClass('ready');
 
@@ -47,13 +58,14 @@ function onFeedbackFormSubmit(e) {
     var $feedbackForm = $(e.target);
     var message = '';
     var fields = $feedbackForm.serializeArray();
-    each(fields, field => {
-        message += `${field.name}:\n${field.value}\n\n`;
-    });
+    each(fields, field => message += `${field.name}:\n${field.value}\n\n`);
+
+    message += '\n\nBioguide IDs: ( ' + state.bioguideIDs.join(', ') + ' )';
+    message += '\n\nZIP: ' + state.zip;
 
     $.getJSON(Constants.FEEDBACK_TOOL_URL, {
-        campaign: 'save-the-fourth',
-        subject: 'Feedback from Save the Fourth',
+        campaign: 'save-the-fourth-senate',
+        subject: 'Feedback from Save the Fourth (Senate)',
         text: message,
     });
 
@@ -63,7 +75,7 @@ function onFeedbackFormSubmit(e) {
 function onTweetFormSubmit(e) {
     e.preventDefault();
 
-    var tweet = `.@${campaign.twitterIds.join(' @')} ${campaign.twitterText}`;
+    var tweet = `.@${state.twitterIDs.join(' @')} ${state.twitterText}`;
 
     var url =
         'https://twitter.com/intent/tweet?text=' +
@@ -81,7 +93,7 @@ function onTweetFormSubmit(e) {
         hitType       : 'event',
         eventCategory : 'ThanksPageTweet',
         eventAction   : 'sent',
-        eventLabel    : campaign.campaignId,
+        eventLabel    : state.campaignId,
     });
 }
 
@@ -102,14 +114,11 @@ async function onCallFormSubmit(e) {
 
     // Send call
     var callParams = {
-        campaignId: campaign.callCampaign,
+        campaignId: state.callCampaign,
         source_id: StaticKit.query.cleanedSource,
         userPhone: phone,
+        repIds: state.bioguideIDs,
     };
-
-    if (callParams.campaignId === 'ecpa-zip') {
-        callParams.zipcode = getSavedZip();
-    }
 
     $.getJSON(Constants.CALL_TOOL_URL, callParams);
 
@@ -148,76 +157,151 @@ function getSavedZip() {
 }
 
 async function updateCampaignWithZip(zip) {
-    if (!zip) {
-        return;
-    }
-
     var res = await $.getJSON(Constants.SUNLIGHT_LOCATE_URL, {
         apikey: Constants.SUNLIGHT_API_KEY,
-        zip: zip || $('#postcode').val(),
+        zip: zip || 50316,
     });
 
-    // Search for a committee member who represents the visitor
-    for (var representative of res.results) {
-        if (representative.chamber !== 'house') {
-            continue;
+    // Search for committee members who represents the visitor
+    var senators = [];
+    var senatorsWithinCommittee = [];
+    each(res.results, representative => {
+        if (representative.chamber !== 'senate') {
+            return;
         }
 
-        for (var committeeMember of Constants.COMMITTEE_MEMBERS) {
-            if (
-                (committeeMember.district === representative.district) &&
-                (committeeMember.state === representative.state)
-            ) {
-                campaign = {
-                    callCampaign : 'ecpa-zip',
-                    twitterIds   : [ representative.twitter_id ],
-                    twitterText  : 'it’s time to pass the most popular bill in Congress, with no weakening amendments #EmailPrivacyAct https://savethefourth.net',
-                };
+        // A few Senators didn't have Twitter IDs in the Sunlight DB
+        if (!representative.twitter_id) {
+            representative.twitter_id = Constants.TWITTER_ID_BACKUPS[representative.bioguide_id];
+        }
 
-                // Update copy
-                $('body').removeClass('chairman-goodlatte').addClass('your-rep');
+        senators.push(representative);
+        representative.committee = 0;
 
-                break;
+        each(Constants.COMMITTEE_MEMBERS_SENATE, bioguideID => {
+            if (representative.bioguide_id === bioguideID) {
+                senatorsWithinCommittee.push(representative);
+                representative.committee = 1;
+                return false;
             }
-        }
+        });
+    });
+
+    if (senators.length === 0) {
+        state.twitterText = 'the time to #ReformECPA & require warrants for email is now — reject privacy weakening amendments! https://savethefourth.net';
+        senators = [
+            {
+                bioguide_id: 'G000386',
+                twitter_id: 'ChuckGrassley',
+            },
+        ];
+        $('body')
+            .removeClass('variation-default')
+            .addClass('variation-missing');
     }
+
+    if (zip && senatorsWithinCommittee.length > 0) {
+        if (senatorsWithinCommittee.length === 1) {
+            // Update page (Match)
+            state.callCampaign = 'savethefourthnet-senate-match';
+            state.twitterText = 'the time to #ReformECPA & require warrants for email is now — reject privacy weakening amendments! https://savethefourth.net';
+            $('body')
+                .removeClass('variation-default')
+                .addClass('variation-match');
+        } else {
+            // Update page (Matches)
+            state.callCampaign = 'savethefourthnet-senate-matches';
+            state.twitterText = 'the time to #ReformECPA is now — reject all privacy weakening amendments! https://savethefourth.net';
+            $('body')
+                .removeClass('variation-default')
+                .addClass('variation-matches');
+        }
+
+        // Shuffle and store Twitter IDs
+        each(shuffle(senatorsWithinCommittee), senator => {
+            state.twitterIDs.push(senator.twitter_id);
+        });
+    } else {
+        // Shuffle and store Twitter IDs
+        each(shuffle(senators), senator => {
+            state.twitterIDs.push(senator.twitter_id);
+        });
+    }
+
+    // Shuffle the order of calls
+    // Sort committee members higher though
+    senators = shuffle(senators).sort((a, b) => b.committee - a.committee);
+
+    // Store bioguide IDs for call tool
+    each(senators, senator => {
+        state.bioguideIDs.push(senator.bioguide_id);
+    });
+
+    // Add Grassley. Then add the remaining committee members, in shuffled order.
+    var targets = state.bioguideIDs;
+    var shuffledCommitteeMembers = shuffle(clone(Constants.COMMITTEE_MEMBERS_SENATE));
+    targets = targets.concat('G000386');
+    targets = targets.concat(shuffledCommitteeMembers);
+    targets = uniq(targets);
+    state.bioguideIDs = targets;
 }
 
 function tweetToAdditionalMember() {
     var chair = 'RepGoodlatte';
 
     // Only add to default tweets
-    if (campaign.twitterIds[0] !== chair) {
+    if (state.twitterIDs[0] !== chair) {
         return;
     }
 
     // Find additional members
-    while (campaign.twitterIds.join(' @').length <= 40) {
+    while (state.twitterIDs.join(' @').length <= 40) {
         var member = sample(Constants.COMMITTEE_MEMBERS).twitter;
 
-        if (campaign.twitterIds.indexOf(member) > -1) {
+        if (state.twitterIDs.indexOf(member) > -1) {
             continue;
         }
 
-        campaign.twitterIds.push(member);
+        state.twitterIDs.push(member);
     }
 }
 
 function debug() {
     switch (StaticKit.query.debug) {
-        case 'calling-goodlatte':
+        case 'default':
+            sessionStorage.zip = '33880';
+            break;
+
+        case 'match':
+            sessionStorage.zip = '90210';
+            break;
+
+        case 'matches':
+            sessionStorage.zip = '84622';
+            break;
+
+        case 'missing':
+            sessionStorage.zip = '85001';
+            break;
+
+        case 'default-calling':
+            sessionStorage.zip = '33880';
+            Modal.show('.calling');
+            break;
+
+        case 'match-calling':
             sessionStorage.zip = '90210';
             Modal.show('.calling');
             break;
-        case 'calling-rep':
-            sessionStorage.zip = '95046';
+
+        case 'matches-calling':
+            sessionStorage.zip = '84622';
             Modal.show('.calling');
             break;
-        case 'rep':
-            sessionStorage.zip = '95046';
-            break;
-        case 'goodlatte':
-            sessionStorage.zip = '90210';
+
+        case 'missing-calling':
+            sessionStorage.zip = '85001';
+            Modal.show('.calling');
             break;
     }
 }
