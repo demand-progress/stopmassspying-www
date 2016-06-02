@@ -198,10 +198,10 @@ header .headlines {
     background-position: left top;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 28px 0;
+    padding: 28px 0 32px;
 }
 header .headlines h1 {
-    background-color: rgba(91,186,14,.94);
+    background-color: rgba(91,186,14,1);
     color: #fafff2;
     display: inline-block;
     font-size: 46px;
@@ -211,7 +211,7 @@ header .headlines h1 {
     padding: 8px 16px;
 }
 header .headlines h2 {
-    background-color: rgba(91,186,14,.94);
+    background-color: rgba(91,186,14,1);
     color: #fafff2;
     display: inline-block;
     font-size: 42px;
@@ -235,7 +235,7 @@ header .headlines .phones {
 
 @media screen and (max-width: 1019px) {
     header .headlines {
-        padding: 56px 0 64px;
+        padding: 56px 0 36px;
     }
 
     header .headlines h1,
@@ -342,13 +342,13 @@ header .headlines .phones {
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     margin: 16px auto 0;
     max-width: 600px;
-    padding: 24px 60px 32px;
+    padding: 28px 60px;
     position: relative;
     z-index: 99;
 }
 
 .action h2 {
-    color: #161616;
+    color: #fff;
     font-size: 28px;
     letter-spacing: normal;
     padding: 0px 0px 16px;
@@ -362,13 +362,13 @@ header .headlines .phones {
 }
 
 .action h4 {
-    color: #344e30;
+    color: #fff;
     font-size: 18px;
     line-height: 1.2;
 }
 
 .action h4 a {
-    color: #344e30;
+    color: #fff;
 }
 
 @media screen and (max-width: 479px) {
@@ -437,6 +437,7 @@ header .headlines .phones {
 }
 .action .email_signup button {
     background: #FF9900;
+    font-weight: 600;
     transition: background-color .3s;
     width: 100%;
 }
@@ -494,7 +495,7 @@ header .headlines .phones {
 }
 
 .action-wrapper .counter {
-    background-color: #daefe5;
+    background-color: #4A9A09;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     display: none;
     height: 100px;
@@ -848,14 +849,14 @@ section .share {
     background: #FF9900;
     color: #fff;
     text-align: center;
-    padding: 30px 16px;
+    padding: 24px 16px;
     -webkit-border-top-left-radius: 10px;
     -webkit-border-top-right-radius: 10px;
     -moz-border-radius-topleft: 10px;
     -moz-border-radius-topright: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
     line-height: 31px;
     font-family: "Open Sans";
@@ -1128,10 +1129,10 @@ section.midnight-share-train p {
 
 /* Checkbox */
 .squaredFour {
-    color: #344e30;
+    color: #fff;
     display: block;
-    font-size: 16px;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.3;
     margin: 16px auto 0;
     overflow: hidden;
     position: relative;
@@ -1160,7 +1161,7 @@ section.midnight-share-train p {
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 26px;
+    top: 25px;
     left: 0;
     border-radius: 4px;
 

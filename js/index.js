@@ -4,7 +4,7 @@
 
 
 // Share text
-var DOMAIN = "dontsellourhomestowallstreet.org";
+var DOMAIN = "stopmassspying.com";
 var TWEET_TEXT = "Tell @SecretaryCastro: Stop selling our neighborhoods to Wall Street! https://" + DOMAIN + "/?source=${source}";
 var EMAIL_SUBJECT = "I just signed this:";
 var EMAIL_BODY = "Hi – I just signed this petition to Secretary Julián Castro urging him to end the Wall Street giveaway at the Department of Housing and Urban Development. \
