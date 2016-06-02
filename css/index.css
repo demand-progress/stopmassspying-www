@@ -39,7 +39,7 @@ body {
     background: #161616 url(../images/background-shattered.jpg) no-repeat center top;
     background-size: 100% auto;
     background-attachment: fixed;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     min-width: 320px;
     text-align: center;
 }
@@ -47,7 +47,7 @@ strong {
     font-weight: bold;
 }
 h1 {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: #f0d88d;
     font-size: 71px;
     text-transform: uppercase;
@@ -56,7 +56,7 @@ h1 {
     letter-spacing: 8px;
 }
 h2 {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: #f0d88d;
     font-size: 45px;
     font-weight: bold;
@@ -66,7 +66,7 @@ h2 {
     padding: 0 32px;
 }
 h3 {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: white;
     font-size: 18px;
     font-weight: 500;
@@ -338,7 +338,7 @@ header .headlines .phones {
 }
 
 .action {
-    background: rgb(79, 162, 11);
+    background: rgba(91,186,14,1);
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     margin: 16px auto 0;
     max-width: 600px;
@@ -348,7 +348,7 @@ header .headlines .phones {
 }
 
 .action h2 {
-    color: #fff;
+    color: #010;
     font-size: 28px;
     letter-spacing: normal;
     padding: 0px 0px 16px;
@@ -362,13 +362,13 @@ header .headlines .phones {
 }
 
 .action h4 {
-    color: #efe;
+    color: #121;
     font-size: 18px;
     line-height: 1.2;
 }
 
 .action h4 a {
-    color: #fff;
+    color: #121;
 }
 
 @media screen and (max-width: 479px) {
@@ -384,6 +384,11 @@ header .headlines .phones {
     vertical-align: top;
     margin: 0 auto;
 }
+
+.action .fields-and-button {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12);
+}
+
 .action .email_signup #thanks {
     position: absolute;
     left: 0px;
@@ -410,7 +415,7 @@ header .headlines .phones {
     line-height: 60px;
     padding: 0px 20px;
     font-size: 25px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 100;
     border-right: 1px solid #ccc;
     border-top: 1px solid #ccc;
@@ -524,7 +529,7 @@ button {
     font-size: 22px;
     cursor: pointer;
     font-weight: 500;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
 }
 a.btn {
     display: inline-block;
@@ -858,7 +863,7 @@ section .share {
     font-size: 24px;
     font-weight: bold;
     line-height: 31px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     letter-spacing: 1px;
     margin-bottom: 25px;
 }
@@ -976,7 +981,7 @@ section .share {
     line-height: 60px;
     padding: 0px 20px;
     font-size: 25px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 100;
     border: 1px solid #ccc;
     border-bottom: none;
@@ -1128,7 +1133,7 @@ section.midnight-share-train p {
 
 /* Checkbox */
 .squaredFour {
-    color: #eee;
+    color: #232;
     display: block;
     font-size: 14px;
     line-height: 1.3;
@@ -1236,7 +1241,7 @@ h3.nopad {
 }
 .flyer {
     font-weight: bold;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 29px;
     text-transform: uppercase;
     color: white;
