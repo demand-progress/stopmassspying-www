@@ -23328,10 +23328,16 @@
 	                            (0, _jquery2.default)('body').removeClass('variation-default').addClass('variation-missing');
 	                        }
 
+	                        // Shuffle reps
+	                        reps = (0, _shuffle2.default)(reps);
+
 	                        // Store Twitter & Bioguide IDs
-	                        (0, _each2.default)(reps, function (representative) {
+	                        (0, _each2.default)(reps, function (representative, i) {
 	                            state.bioguideIDs.push(representative.bioguide_id);
-	                            state.twitterIDs.push(representative.twitter_id);
+
+	                            if (i == 0) {
+	                                state.twitterIDs.push(representative.twitter_id);
+	                            }
 	                        });
 
 	                        // Add the remaining representatives members, in shuffled order.
@@ -23343,7 +23349,7 @@
 	                        targets = (0, _slice2.default)(targets, 0, 40);
 	                        state.bioguideIDs = targets;
 
-	                    case 13:
+	                    case 14:
 	                    case 'end':
 	                        return _context3.stop();
 	                }

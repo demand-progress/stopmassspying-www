@@ -194,10 +194,16 @@ async function updateCampaignWithZip(zip) {
             .addClass('variation-missing');
     }
 
+    // Shuffle reps
+    reps = shuffle(reps);
+
     // Store Twitter & Bioguide IDs
-    each(reps, representative => {
+    each(reps, (representative, i) => {
         state.bioguideIDs.push(representative.bioguide_id);
-        state.twitterIDs.push(representative.twitter_id);
+
+        if (i == 0) {
+            state.twitterIDs.push(representative.twitter_id);
+        }
     });
 
     // Add the remaining representatives members, in shuffled order.
