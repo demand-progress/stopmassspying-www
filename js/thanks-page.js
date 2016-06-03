@@ -210,42 +210,12 @@ async function updateCampaignWithZip(zip) {
 }
 
 function debug() {
-    switch (StaticKit.query.debug) {
-        case 'default':
-            sessionStorage.zip = '33880';
-            break;
+    if (StaticKit.query.action === 'calling') {
+        Modal.show('.calling');
+    }
 
-        case 'match':
-            sessionStorage.zip = '90210';
-            break;
-
-        case 'matches':
-            sessionStorage.zip = '84622';
-            break;
-
-        case 'missing':
-            sessionStorage.zip = '85001';
-            break;
-
-        case 'default-calling':
-            sessionStorage.zip = '33880';
-            Modal.show('.calling');
-            break;
-
-        case 'match-calling':
-            sessionStorage.zip = '90210';
-            Modal.show('.calling');
-            break;
-
-        case 'matches-calling':
-            sessionStorage.zip = '84622';
-            Modal.show('.calling');
-            break;
-
-        case 'missing-calling':
-            sessionStorage.zip = '85001';
-            Modal.show('.calling');
-            break;
+    if (StaticKit.query.zip) {
+        sessionStorage.zip = StaticKit.query.zip;
     }
 }
 

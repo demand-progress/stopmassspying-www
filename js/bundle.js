@@ -23476,42 +23476,12 @@
 	}
 
 	function debug() {
-	    switch (_staticKit2.default.query.debug) {
-	        case 'default':
-	            sessionStorage.zip = '33880';
-	            break;
+	    if (_staticKit2.default.query.action === 'calling') {
+	        _modal2.default.show('.calling');
+	    }
 
-	        case 'match':
-	            sessionStorage.zip = '90210';
-	            break;
-
-	        case 'matches':
-	            sessionStorage.zip = '84622';
-	            break;
-
-	        case 'missing':
-	            sessionStorage.zip = '85001';
-	            break;
-
-	        case 'default-calling':
-	            sessionStorage.zip = '33880';
-	            _modal2.default.show('.calling');
-	            break;
-
-	        case 'match-calling':
-	            sessionStorage.zip = '90210';
-	            _modal2.default.show('.calling');
-	            break;
-
-	        case 'matches-calling':
-	            sessionStorage.zip = '84622';
-	            _modal2.default.show('.calling');
-	            break;
-
-	        case 'missing-calling':
-	            sessionStorage.zip = '85001';
-	            _modal2.default.show('.calling');
-	            break;
+	    if (_staticKit2.default.query.zip) {
+	        sessionStorage.zip = _staticKit2.default.query.zip;
 	    }
 	}
 
