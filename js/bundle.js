@@ -78,7 +78,7 @@
 
 	var _staticKit2 = _interopRequireDefault(_staticKit);
 
-	var _thanksPage = __webpack_require__(472);
+	var _thanksPage = __webpack_require__(417);
 
 	var _thanksPage2 = _interopRequireDefault(_thanksPage);
 
@@ -10032,27 +10032,6 @@
 	'postcode'];
 
 	// Campaign
-	constants.COMMITTEE_MEMBERS_SENATE = ['G000386', // Grassley
-	'L000174', // Leahy
-	'F000062', // Feinstein
-	'S001141', // Sessions
-	'S000148', // Schumer
-	'G000359', // Graham
-	'D000563', // Durbin
-	'W000802', // Whitehouse
-	'F000444', // Flake
-	'C001088', // Coons
-	'V000127', // Vitter
-	'B001277', // Blumenthal
-	'P000612', // Perdue
-	'T000476', // Tillis
-	'H000338', // Hatch
-	'L000577', // Lee
-	'C001056', // Cornyn
-	'C001098', // Cruz
-	'K000367', // Klobuchar
-	'F000457'];
-	// Franken
 	constants.TWITTER_ID_BACKUPS = {
 	    'C001075': 'BillCassidy',
 	    'F000457': 'AlFranken',
@@ -10060,7 +10039,118 @@
 	    'P000603': 'RandPaul',
 	    'V000127': 'DavidVitter'
 	};
+	constants.LEGISLATORS_TO_CALL = ['B001287', // Ami Bera (CA)
+	'A000370', // Alma Adams (NC)
+	'B000911', // Corrine Brown (FL)
+	'A000371', // Pete Aguilar (CA)
+	'B001275', // Larry Bucshon (IN)
+	'A000373', // Brad Ashford (NE)
+	'C001083', // John Carney (DE)
+	'B001291', // Brian Babin (TX)
+	'C001072', // André Carson (IN)
+	'B001281', // Joyce Beatty (OH)
+	'C001066', // Kathy Castor (FL)
+	'B001292', // Donald Beyer (VA)
+	'C001076', // Jason Chaffetz (UT)
+	'B001257', // Gus Bilirakis (FL)
+	'C001077', // Mike Coffman (CO)
+	'B001294', // Rod Blum (IA)
+	'C001094', // Paul Cook (CA)
+	'B001296', // Brendan Boyle (PA)
+	'C001048', // John Culberson (TX)
+	'B001290', // David Brat (VA)
+	'D000096', // Danny Davis (IL)
+	'B001297', // Ken Buck (CO)
+	'F000458', // Stephen Fincher (TN)
+	'B001286', // Cheri Bustos (IL)
+	'F000461', // Bill Flores (TX)
+	'C001103', // Buddy Carter (GA)
+	'F000454', // Bill Foster (IL)
+	'C001107', // Carlos Curbelo (FL)
+	'G000559', // John Garamendi (CA)
+	'D000623', // Mark DeSaulnier (CA)
+	'G000548', // Scott Garrett (NJ)
+	'E000294', // Tom Emmer (MN)
+	'H001051', // Richard Hanna (NY)
+	'F000448', // Trent Franks (AZ)
+	'H001045', // Gregg Harper (MS)
+	'F000455', // Marcia Fudge (OH)
+	'H000324', // Alcee Hastings (FL)
+	'G000574', // Ruben Gallego (AZ)
+	'H001058', // Bill Huizenga (MI)
+	'G000577', // Garret Graves (LA)
+	'J000126', // Eddie Johnson (TX)
+	'G000576', // Glenn Grothman (WI)
+	'K000375', // William Keating (MA)
+	'G000570', // Frank Guinta (NH)
+	'K000362', // Steve King (IA)
+	'H001071', // Jody Hice (GA)
+	'L000551', // Barbara Lee (CA)
+	'H000636', // Rubén Hinojosa (TX)
+	'L000569', // Blaine Luetkemeyer (MO)
+	'H000874', // Steny Hoyer (MD)
+	'L000571', // Cynthia Lummis (WY)
+	'J000297', // Evan Jenkins (WV)
+	'M001158', // Kenny Marchant (TX)
+	'K000388', // Trent Kelly (MS)
+	'M001156', // Patrick McHenry (NC)
+	'K000368', // Ann Kirkpatrick (AZ)
+	'M001180', // David McKinley (WV)
+	'L000581', // Brenda Lawrence (MI)
+	'M001159', // Cathy McMorris Rodgers (WA)
+	'L000263', // Sander Levin (MI)
+	'M001150', // Candice Miller (MI)
+	'L000582', // Ted Lieu (CA)
+	'M001190', // Markwayne Mullin (OK)
+	'L000583', // Barry Loudermilk (GA)
+	'N000184', // Kristi Noem (SD)
+	'L000584', // Mia Love (UT)
+	'P000601', // Steven Palazzo (MS)
+	'L000580', // Michelle Lujan Grisham (NM)
+	'P000096', // Bill Pascrell (NJ)
+	'M001189', // Luke Messer (IN)
+	'P000594', // Erik Paulsen (MN)
+	'M001195', // Alex Mooney (WV)
+	'Q000023', // Mike Quigley (IL)
+	'M001182', // Mick Mulvaney (SC)
+	'R000122', // John Reed (RI)
+	'N000188', // Donald Norcross (NJ)
+	'R000583', // Thomas Rooney (FL)
+	'P000258', // Collin Peterson (MN)
+	'R000570', // Paul Ryan (WI)
+	'P000598', // Jared Polis (CO)
+	'S001176', // Steve Scalise (LA)
+	'R000053', // Charles Rangel (NY)
+	'S001189', // Austin Scott (GA)
+	'R000601', // John Ratcliffe (TX)
+	'S000344', // Brad Sherman (CA)
+	'R000586', // James Renacci (OH)
+	'S000364', // John Shimkus (IL)
+	'R000588', // Cedric Richmond (LA)
+	'S001154', // Bill Shuster (PA)
+	'R000515', // Bobby Rush (IL)
+	'S001195', // Jason Smith (MO)
+	'R000577', // Tim Ryan (OH)
+	'S001172', // Adrian Smith (NE)
+	'S000583', // Lamar Smith (TX)
+	'S001175', // Jackie Speier (CA)
+	'T000473', // Mark Takai (HI)
+	'S001192', // Chris Stewart (UT)
+	'T000193', // Bennie Thompson (MS)
+	'S001193', // Eric Swalwell (CA)
+	'T000467', // Glenn Thompson (PA)
+	'W000813', // Jackie Walorski (IN)
+	'W000798', // Tim Walberg (MI)
+	'W000815', // Brad Wenstrup (OH)
+	'W000819', // Mark Walker (NC)
+	'W000810', // Rob Woodall (GA)
+	'W000799', // Timothy Walz (MN)
+	'W000187', // Maxine Waters (CA)
+	'W000822', // Bonnie Watson Coleman (NJ)
+	'Y000033', // Don Young (AK)
+	'Y000066'];
 
+	// David Young (IA)
 	exports.default = constants;
 
 /***/ },
@@ -23072,7 +23162,364 @@
 	};
 
 /***/ },
-/* 417 */,
+/* 417 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var start = function () {
+	    var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee() {
+	        var zip;
+	        return regeneratorRuntime.wrap(function _callee$(_context) {
+	            while (1) {
+	                switch (_context.prev = _context.next) {
+	                    case 0:
+	                        // Debug
+	                        debug();
+
+	                        // Update campaign
+	                        zip = getSavedZip();
+
+	                        state.zip = zip;
+	                        _context.next = 5;
+	                        return updateCampaignWithZip(zip);
+
+	                    case 5:
+
+	                        // Update suggested Tweet
+	                        (0, _jquery2.default)('.tweet-content').html(state.twitterText.replace(/#(\w+)/g, '<span class="link">#$1</span>').replace(/http([^ ]+)/g, '<span class="link">http$1</span>'));
+
+	                        // Update forms
+	                        (0, _jquery2.default)('.sample-tweet .handle').text('@' + state.twitterIDs.join(' @'));
+
+	                        // Show forms
+	                        (0, _jquery2.default)('body').addClass('ready');
+	                        (0, _jquery2.default)('.options').addClass('ready');
+	                        (0, _jquery2.default)('.tweet-prompt').addClass('ready');
+
+	                        // Call form logic
+	                        (0, _jquery2.default)('.call-wrapper form').on('submit', onCallFormSubmit);
+
+	                        // Tweet form logic
+	                        (0, _jquery2.default)('.tweet-wrapper form').on('submit', onTweetFormSubmit);
+
+	                        // Feedback form logic
+	                        (0, _jquery2.default)('.calling-wrapper form').on('submit', onFeedbackFormSubmit);
+
+	                    case 13:
+	                    case 'end':
+	                        return _context.stop();
+	                }
+	            }
+	        }, _callee, this);
+	    }));
+
+	    return function start() {
+	        return ref.apply(this, arguments);
+	    };
+	}();
+
+	var onCallFormSubmit = function () {
+	    var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee2(e) {
+	        var $phone, phone, callParams;
+	        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+	            while (1) {
+	                switch (_context2.prev = _context2.next) {
+	                    case 0:
+	                        e.preventDefault();
+
+	                        $phone = (0, _jquery2.default)('input[name=phone]');
+	                        phone = $phone.val().replace(/[^\d]/g, '');
+
+	                        if (!(phone.length < 10)) {
+	                            _context2.next = 5;
+	                            break;
+	                        }
+
+	                        return _context2.abrupt('return', alert('Please enter your 10 digit phone number.'));
+
+	                    case 5:
+
+	                        _modal2.default.show('.calling');
+
+	                        $phone.val('');
+
+	                        // Send call
+	                        callParams = {
+	                            campaignId: state.callCampaign,
+	                            source_id: _staticKit2.default.query.cleanedSource,
+	                            userPhone: phone,
+	                            repIds: state.bioguideIDs
+	                        };
+
+
+	                        _jquery2.default.getJSON(_constants2.default.CALL_TOOL_URL, callParams);
+
+	                        // Deselect input
+	                        document.activeElement.blur();
+
+	                        // Show thanks
+	                        showCallFormThanks();
+
+	                        // Send event
+	                        ga('send', {
+	                            hitType: 'event',
+	                            eventCategory: 'ThanksPageCall',
+	                            eventAction: 'sent',
+	                            eventLabel: callParams.campaignId
+	                        });
+
+	                    case 12:
+	                    case 'end':
+	                        return _context2.stop();
+	                }
+	            }
+	        }, _callee2, this);
+	    }));
+
+	    return function onCallFormSubmit(_x) {
+	        return ref.apply(this, arguments);
+	    };
+	}();
+
+	var updateCampaignWithZip = function () {
+	    var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee3(zip) {
+	        var res, reps, targets, shuffledReps;
+	        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+	            while (1) {
+	                switch (_context3.prev = _context3.next) {
+	                    case 0:
+	                        _context3.next = 2;
+	                        return _jquery2.default.getJSON(_constants2.default.SUNLIGHT_LOCATE_URL, {
+	                            apikey: _constants2.default.SUNLIGHT_API_KEY,
+	                            zip: zip || 50316
+	                        });
+
+	                    case 2:
+	                        res = _context3.sent;
+
+
+	                        // Search for visitor's rep
+	                        reps = [];
+
+	                        (0, _each2.default)(res.results, function (representative) {
+	                            if (representative.chamber !== 'house') {
+	                                return;
+	                            }
+
+	                            // A few reps didn't have Twitter IDs in the Sunlight DB
+	                            if (!representative.twitter_id) {
+	                                representative.twitter_id = _constants2.default.TWITTER_ID_BACKUPS[representative.bioguide_id];
+	                            }
+
+	                            reps.push(representative);
+	                        });
+
+	                        if (reps.length === 0) {
+	                            state.twitterText = 'the time to #ReformECPA & require warrants for email is now — reject privacy weakening amendments! https://savethefourth.net';
+	                            reps = [{
+	                                bioguide_id: 'G000386',
+	                                twitter_id: 'ChuckGrassley'
+	                            }];
+	                            (0, _jquery2.default)('body').removeClass('variation-default').addClass('variation-missing');
+	                        }
+
+	                        // Store Twitter & Bioguide IDs
+	                        (0, _each2.default)(reps, function (representative) {
+	                            state.bioguideIDs.push(representative.bioguide_id);
+	                            state.twitterIDs.push(representative.twitter_id);
+	                        });
+
+	                        // Add the remaining representatives members, in shuffled order.
+	                        targets = state.bioguideIDs;
+	                        shuffledReps = (0, _shuffle2.default)((0, _clone2.default)(_constants2.default.LEGISLATORS_TO_CALL));
+
+	                        targets = targets.concat(shuffledReps);
+	                        targets = (0, _uniq2.default)(targets);
+	                        targets = (0, _slice2.default)(targets, 0, 40);
+	                        state.bioguideIDs = targets;
+
+	                    case 13:
+	                    case 'end':
+	                        return _context3.stop();
+	                }
+	            }
+	        }, _callee3, this);
+	    }));
+
+	    return function updateCampaignWithZip(_x2) {
+	        return ref.apply(this, arguments);
+	    };
+	}();
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _clone = __webpack_require__(418);
+
+	var _clone2 = _interopRequireDefault(_clone);
+
+	var _constants = __webpack_require__(3);
+
+	var _constants2 = _interopRequireDefault(_constants);
+
+	var _each = __webpack_require__(5);
+
+	var _each2 = _interopRequireDefault(_each);
+
+	var _modal = __webpack_require__(118);
+
+	var _modal2 = _interopRequireDefault(_modal);
+
+	var _reduce = __webpack_require__(472);
+
+	var _reduce2 = _interopRequireDefault(_reduce);
+
+	var _sample = __webpack_require__(448);
+
+	var _sample2 = _interopRequireDefault(_sample);
+
+	var _shuffle = __webpack_require__(453);
+
+	var _shuffle2 = _interopRequireDefault(_shuffle);
+
+	var _slice = __webpack_require__(474);
+
+	var _slice2 = _interopRequireDefault(_slice);
+
+	var _staticKit = __webpack_require__(4);
+
+	var _staticKit2 = _interopRequireDefault(_staticKit);
+
+	var _uniq = __webpack_require__(463);
+
+	var _uniq2 = _interopRequireDefault(_uniq);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step("next", value); }, function (err) { return step("throw", err); }); } } return step("next"); }); }; }
+
+	var state = {
+	    bioguideIDs: [],
+	    callCampaign: 'stop-mass-spying',
+	    twitterIDs: [],
+	    twitterText: 'support the effort to #ReformECPA & urge leadership to swiftly pass a clean bill! https://savethefourth.net',
+	    zip: ''
+	};
+
+	function onFeedbackFormSubmit(e) {
+	    e.preventDefault();
+
+	    var $feedbackForm = (0, _jquery2.default)(e.target);
+	    var fields = $feedbackForm.serializeArray();
+	    var message = (0, _reduce2.default)(fields, function (field) {
+	        return message += field.name + ':\n' + field.value + '\n\n';
+	    }, '');
+
+	    message += '\n\nBioguide IDs: ( ' + state.bioguideIDs.join(', ') + ' )';
+	    message += '\n\nZIP: ' + state.zip;
+
+	    _jquery2.default.getJSON(_constants2.default.FEEDBACK_TOOL_URL, {
+	        campaign: _constants2.default.ACTIONKIT_PAGE,
+	        subject: 'Feedback from Stop Mass Spying',
+	        text: message
+	    });
+
+	    $feedbackForm.addClass('sent');
+	}
+
+	function onTweetFormSubmit(e) {
+	    e.preventDefault();
+
+	    var tweet = '.@' + state.twitterIDs.join(' @') + ' ' + state.twitterText;
+
+	    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet);
+
+	    window.open(url);
+
+	    // Show thanks
+	    var $submit = (0, _jquery2.default)('.tweet-wrapper button');
+	    $submit.addClass('thanks');
+	    $submit.text('Thanks!');
+
+	    // Send event
+	    ga('send', {
+	        hitType: 'event',
+	        eventCategory: 'ThanksPageTweet',
+	        eventAction: 'sent',
+	        eventLabel: state.campaignId
+	    });
+	}
+
+	function showCallFormThanks() {
+	    var $callWrapper = (0, _jquery2.default)('.call-wrapper');
+	    $callWrapper.addClass('thanks');
+	    var $submit = (0, _jquery2.default)('.call-wrapper button');
+	    $submit.attr('disabled', true);
+	    $submit.text('Thanks!');
+
+	    (0, _jquery2.default)('.call-wrapper form input').remove();
+	    (0, _jquery2.default)('.call-wrapper h2').remove();
+	}
+
+	function getSavedZip() {
+	    try {
+	        return sessionStorage.zip;
+	    } catch (e) {
+	        return null;
+	    }
+	}
+
+	function debug() {
+	    switch (_staticKit2.default.query.debug) {
+	        case 'default':
+	            sessionStorage.zip = '33880';
+	            break;
+
+	        case 'match':
+	            sessionStorage.zip = '90210';
+	            break;
+
+	        case 'matches':
+	            sessionStorage.zip = '84622';
+	            break;
+
+	        case 'missing':
+	            sessionStorage.zip = '85001';
+	            break;
+
+	        case 'default-calling':
+	            sessionStorage.zip = '33880';
+	            _modal2.default.show('.calling');
+	            break;
+
+	        case 'match-calling':
+	            sessionStorage.zip = '90210';
+	            _modal2.default.show('.calling');
+	            break;
+
+	        case 'matches-calling':
+	            sessionStorage.zip = '84622';
+	            _modal2.default.show('.calling');
+	            break;
+
+	        case 'missing-calling':
+	            sessionStorage.zip = '85001';
+	            _modal2.default.show('.calling');
+	            break;
+	    }
+	}
+
+	exports.default = {
+	    start: start
+	};
+
+/***/ },
 /* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -24927,412 +25374,167 @@
 /* 472 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var start = function () {
-	    var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee() {
-	        var zip;
-	        return regeneratorRuntime.wrap(function _callee$(_context) {
-	            while (1) {
-	                switch (_context.prev = _context.next) {
-	                    case 0:
-	                        // Debug
-	                        debug();
-
-	                        // Update campaign
-	                        zip = getSavedZip();
-
-	                        state.zip = zip;
-	                        _context.next = 5;
-	                        return updateCampaignWithZip(zip);
-
-	                    case 5:
-	                        tweetToAdditionalMember();
-
-	                        // Update suggested Tweet
-	                        (0, _jquery2.default)('.tweet-content').html(state.twitterText.replace(/#(\w+)/g, '<span class="link">#$1</span>').replace(/http([^ ]+)/g, '<span class="link">http$1</span>'));
-
-	                        // Update forms
-	                        (0, _jquery2.default)('.sample-tweet .handle').text('@' + state.twitterIDs.join(' @'));
-
-	                        // Show forms
-	                        (0, _jquery2.default)('body').addClass('ready');
-	                        (0, _jquery2.default)('.options').addClass('ready');
-	                        (0, _jquery2.default)('.tweet-prompt').addClass('ready');
-
-	                        // Call form logic
-	                        (0, _jquery2.default)('.call-wrapper form').on('submit', onCallFormSubmit);
-
-	                        // Tweet form logic
-	                        (0, _jquery2.default)('.tweet-wrapper form').on('submit', onTweetFormSubmit);
-
-	                        // Feedback form logic
-	                        (0, _jquery2.default)('.calling-wrapper form').on('submit', onFeedbackFormSubmit);
-
-	                    case 14:
-	                    case 'end':
-	                        return _context.stop();
-	                }
-	            }
-	        }, _callee, this);
-	    }));
-
-	    return function start() {
-	        return ref.apply(this, arguments);
-	    };
-	}();
-
-	var onCallFormSubmit = function () {
-	    var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee2(e) {
-	        var $phone, phone, callParams;
-	        return regeneratorRuntime.wrap(function _callee2$(_context2) {
-	            while (1) {
-	                switch (_context2.prev = _context2.next) {
-	                    case 0:
-	                        e.preventDefault();
-
-	                        $phone = (0, _jquery2.default)('input[name=phone]');
-	                        phone = $phone.val().replace(/[^\d]/g, '');
-
-	                        if (!(phone.length < 10)) {
-	                            _context2.next = 5;
-	                            break;
-	                        }
-
-	                        return _context2.abrupt('return', alert('Please enter your 10 digit phone number.'));
-
-	                    case 5:
-
-	                        _modal2.default.show('.calling');
-
-	                        $phone.val('');
-
-	                        // Send call
-	                        callParams = {
-	                            campaignId: state.callCampaign,
-	                            source_id: _staticKit2.default.query.cleanedSource,
-	                            userPhone: phone,
-	                            repIds: state.bioguideIDs
-	                        };
-
-
-	                        _jquery2.default.getJSON(_constants2.default.CALL_TOOL_URL, callParams);
-
-	                        // Deselect input
-	                        document.activeElement.blur();
-
-	                        // Show thanks
-	                        showCallFormThanks();
-
-	                        // Send event
-	                        ga('send', {
-	                            hitType: 'event',
-	                            eventCategory: 'ThanksPageCall',
-	                            eventAction: 'sent',
-	                            eventLabel: callParams.campaignId
-	                        });
-
-	                    case 12:
-	                    case 'end':
-	                        return _context2.stop();
-	                }
-	            }
-	        }, _callee2, this);
-	    }));
-
-	    return function onCallFormSubmit(_x) {
-	        return ref.apply(this, arguments);
-	    };
-	}();
-
-	var updateCampaignWithZip = function () {
-	    var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee3(zip) {
-	        var res, senators, senatorsWithinCommittee, targets, shuffledCommitteeMembers;
-	        return regeneratorRuntime.wrap(function _callee3$(_context3) {
-	            while (1) {
-	                switch (_context3.prev = _context3.next) {
-	                    case 0:
-	                        _context3.next = 2;
-	                        return _jquery2.default.getJSON(_constants2.default.SUNLIGHT_LOCATE_URL, {
-	                            apikey: _constants2.default.SUNLIGHT_API_KEY,
-	                            zip: zip || 50316
-	                        });
-
-	                    case 2:
-	                        res = _context3.sent;
-
-
-	                        // Search for committee members who represents the visitor
-	                        senators = [];
-	                        senatorsWithinCommittee = [];
-
-	                        (0, _each2.default)(res.results, function (representative) {
-	                            if (representative.chamber !== 'senate') {
-	                                return;
-	                            }
-
-	                            // A few Senators didn't have Twitter IDs in the Sunlight DB
-	                            if (!representative.twitter_id) {
-	                                representative.twitter_id = _constants2.default.TWITTER_ID_BACKUPS[representative.bioguide_id];
-	                            }
-
-	                            senators.push(representative);
-	                            representative.committee = 0;
-
-	                            (0, _each2.default)(_constants2.default.COMMITTEE_MEMBERS_SENATE, function (bioguideID) {
-	                                if (representative.bioguide_id === bioguideID) {
-	                                    senatorsWithinCommittee.push(representative);
-	                                    representative.committee = 1;
-	                                    return false;
-	                                }
-	                            });
-	                        });
-
-	                        if (senators.length === 0) {
-	                            state.twitterText = 'the time to #ReformECPA & require warrants for email is now — reject privacy weakening amendments! https://savethefourth.net';
-	                            senators = [{
-	                                bioguide_id: 'G000386',
-	                                twitter_id: 'ChuckGrassley'
-	                            }];
-	                            (0, _jquery2.default)('body').removeClass('variation-default').addClass('variation-missing');
-	                        }
-
-	                        if (zip && senatorsWithinCommittee.length > 0) {
-	                            if (senatorsWithinCommittee.length === 1) {
-	                                // Update page (Match)
-	                                state.callCampaign = 'savethefourthnet-senate-match';
-	                                state.twitterText = 'the time to #ReformECPA & require warrants for email is now — reject privacy weakening amendments! https://savethefourth.net';
-	                                (0, _jquery2.default)('body').removeClass('variation-default').addClass('variation-match');
-	                            } else {
-	                                // Update page (Matches)
-	                                state.callCampaign = 'savethefourthnet-senate-matches';
-	                                state.twitterText = 'the time to #ReformECPA is now — reject all privacy weakening amendments! https://savethefourth.net';
-	                                (0, _jquery2.default)('body').removeClass('variation-default').addClass('variation-matches');
-	                            }
-
-	                            // Shuffle and store Twitter IDs
-	                            (0, _each2.default)((0, _shuffle2.default)(senatorsWithinCommittee), function (senator) {
-	                                state.twitterIDs.push(senator.twitter_id);
-	                            });
-	                        } else {
-	                            // Shuffle and store Twitter IDs
-	                            (0, _each2.default)((0, _shuffle2.default)(senators), function (senator) {
-	                                state.twitterIDs.push(senator.twitter_id);
-	                            });
-	                        }
-
-	                        // Shuffle the order of calls
-	                        // Sort committee members higher though
-	                        senators = (0, _shuffle2.default)(senators).sort(function (a, b) {
-	                            return b.committee - a.committee;
-	                        });
-
-	                        // Store bioguide IDs for call tool
-	                        (0, _each2.default)(senators, function (senator) {
-	                            state.bioguideIDs.push(senator.bioguide_id);
-	                        });
-
-	                        // Add Grassley. Then add the remaining committee members, in shuffled order.
-	                        targets = state.bioguideIDs;
-	                        shuffledCommitteeMembers = (0, _shuffle2.default)((0, _clone2.default)(_constants2.default.COMMITTEE_MEMBERS_SENATE));
-
-	                        targets = targets.concat('G000386');
-	                        targets = targets.concat(shuffledCommitteeMembers);
-	                        targets = (0, _uniq2.default)(targets);
-	                        state.bioguideIDs = targets;
-
-	                    case 16:
-	                    case 'end':
-	                        return _context3.stop();
-	                }
-	            }
-	        }, _callee3, this);
-	    }));
-
-	    return function updateCampaignWithZip(_x2) {
-	        return ref.apply(this, arguments);
-	    };
-	}();
-
-	var _jquery = __webpack_require__(1);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _clone = __webpack_require__(418);
-
-	var _clone2 = _interopRequireDefault(_clone);
-
-	var _constants = __webpack_require__(3);
-
-	var _constants2 = _interopRequireDefault(_constants);
-
-	var _each = __webpack_require__(5);
-
-	var _each2 = _interopRequireDefault(_each);
-
-	var _modal = __webpack_require__(118);
-
-	var _modal2 = _interopRequireDefault(_modal);
-
-	var _sample = __webpack_require__(448);
-
-	var _sample2 = _interopRequireDefault(_sample);
-
-	var _shuffle = __webpack_require__(453);
-
-	var _shuffle2 = _interopRequireDefault(_shuffle);
-
-	var _staticKit = __webpack_require__(4);
-
-	var _staticKit2 = _interopRequireDefault(_staticKit);
-
-	var _uniq = __webpack_require__(463);
-
-	var _uniq2 = _interopRequireDefault(_uniq);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step("next", value); }, function (err) { return step("throw", err); }); } } return step("next"); }); }; }
-
-	var state = {
-	    bioguideIDs: [],
-	    callCampaign: 'savethefourthnet-senate-default',
-	    twitterIDs: [],
-	    twitterText: 'support the effort to #ReformECPA & urge leadership to swiftly pass a clean bill! https://savethefourth.net',
-	    zip: ''
-	};
-
-	function onFeedbackFormSubmit(e) {
-	    e.preventDefault();
-
-	    var $feedbackForm = (0, _jquery2.default)(e.target);
-	    var message = '';
-	    var fields = $feedbackForm.serializeArray();
-	    (0, _each2.default)(fields, function (field) {
-	        return message += field.name + ':\n' + field.value + '\n\n';
-	    });
-
-	    message += '\n\nBioguide IDs: ( ' + state.bioguideIDs.join(', ') + ' )';
-	    message += '\n\nZIP: ' + state.zip;
-
-	    _jquery2.default.getJSON(_constants2.default.FEEDBACK_TOOL_URL, {
-	        campaign: 'save-the-fourth-senate',
-	        subject: 'Feedback from Save the Fourth (Senate)',
-	        text: message
-	    });
-
-	    $feedbackForm.addClass('sent');
+	var arrayReduce = __webpack_require__(437),
+	    baseEach = __webpack_require__(8),
+	    baseIteratee = __webpack_require__(32),
+	    baseReduce = __webpack_require__(473),
+	    isArray = __webpack_require__(27);
+
+	/**
+	 * Reduces `collection` to a value which is the accumulated result of running
+	 * each element in `collection` thru `iteratee`, where each successive
+	 * invocation is supplied the return value of the previous. If `accumulator`
+	 * is not given, the first element of `collection` is used as the initial
+	 * value. The iteratee is invoked with four arguments:
+	 * (accumulator, value, index|key, collection).
+	 *
+	 * Many lodash methods are guarded to work as iteratees for methods like
+	 * `_.reduce`, `_.reduceRight`, and `_.transform`.
+	 *
+	 * The guarded methods are:
+	 * `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,
+	 * and `sortBy`
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Collection
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+	 * @param {*} [accumulator] The initial value.
+	 * @returns {*} Returns the accumulated value.
+	 * @see _.reduceRight
+	 * @example
+	 *
+	 * _.reduce([1, 2], function(sum, n) {
+	 *   return sum + n;
+	 * }, 0);
+	 * // => 3
+	 *
+	 * _.reduce({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {
+	 *   (result[value] || (result[value] = [])).push(key);
+	 *   return result;
+	 * }, {});
+	 * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
+	 */
+	function reduce(collection, iteratee, accumulator) {
+	  var func = isArray(collection) ? arrayReduce : baseReduce,
+	      initAccum = arguments.length < 3;
+
+	  return func(collection, baseIteratee(iteratee, 4), accumulator, initAccum, baseEach);
 	}
 
-	function onTweetFormSubmit(e) {
-	    e.preventDefault();
+	module.exports = reduce;
 
-	    var tweet = '.@' + state.twitterIDs.join(' @') + ' ' + state.twitterText;
 
-	    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet);
+/***/ },
+/* 473 */
+/***/ function(module, exports) {
 
-	    window.open(url);
-
-	    // Show thanks
-	    var $submit = (0, _jquery2.default)('.tweet-wrapper button');
-	    $submit.addClass('thanks');
-	    $submit.text('Thanks!');
-
-	    // Send event
-	    ga('send', {
-	        hitType: 'event',
-	        eventCategory: 'ThanksPageTweet',
-	        eventAction: 'sent',
-	        eventLabel: state.campaignId
-	    });
+	/**
+	 * The base implementation of `_.reduce` and `_.reduceRight`, without support
+	 * for iteratee shorthands, which iterates over `collection` using `eachFunc`.
+	 *
+	 * @private
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @param {*} accumulator The initial value.
+	 * @param {boolean} initAccum Specify using the first or last element of
+	 *  `collection` as the initial value.
+	 * @param {Function} eachFunc The function to iterate over `collection`.
+	 * @returns {*} Returns the accumulated value.
+	 */
+	function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
+	  eachFunc(collection, function(value, index, collection) {
+	    accumulator = initAccum
+	      ? (initAccum = false, value)
+	      : iteratee(accumulator, value, index, collection);
+	  });
+	  return accumulator;
 	}
 
-	function showCallFormThanks() {
-	    var $callWrapper = (0, _jquery2.default)('.call-wrapper');
-	    $callWrapper.addClass('thanks');
-	    var $submit = (0, _jquery2.default)('.call-wrapper button');
-	    $submit.attr('disabled', true);
-	    $submit.text('Thanks!');
+	module.exports = baseReduce;
 
-	    (0, _jquery2.default)('.call-wrapper form input').remove();
-	    (0, _jquery2.default)('.call-wrapper h2').remove();
+
+/***/ },
+/* 474 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var baseSlice = __webpack_require__(475),
+	    isIterateeCall = __webpack_require__(456),
+	    toInteger = __webpack_require__(460);
+
+	/**
+	 * Creates a slice of `array` from `start` up to, but not including, `end`.
+	 *
+	 * **Note:** This method is used instead of
+	 * [`Array#slice`](https://mdn.io/Array/slice) to ensure dense arrays are
+	 * returned.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 3.0.0
+	 * @category Array
+	 * @param {Array} array The array to slice.
+	 * @param {number} [start=0] The start position.
+	 * @param {number} [end=array.length] The end position.
+	 * @returns {Array} Returns the slice of `array`.
+	 */
+	function slice(array, start, end) {
+	  var length = array ? array.length : 0;
+	  if (!length) {
+	    return [];
+	  }
+	  if (end && typeof end != 'number' && isIterateeCall(array, start, end)) {
+	    start = 0;
+	    end = length;
+	  }
+	  else {
+	    start = start == null ? 0 : toInteger(start);
+	    end = end === undefined ? length : toInteger(end);
+	  }
+	  return baseSlice(array, start, end);
 	}
 
-	function getSavedZip() {
-	    try {
-	        return sessionStorage.zip;
-	    } catch (e) {
-	        return null;
-	    }
+	module.exports = slice;
+
+
+/***/ },
+/* 475 */
+/***/ function(module, exports) {
+
+	/**
+	 * The base implementation of `_.slice` without an iteratee call guard.
+	 *
+	 * @private
+	 * @param {Array} array The array to slice.
+	 * @param {number} [start=0] The start position.
+	 * @param {number} [end=array.length] The end position.
+	 * @returns {Array} Returns the slice of `array`.
+	 */
+	function baseSlice(array, start, end) {
+	  var index = -1,
+	      length = array.length;
+
+	  if (start < 0) {
+	    start = -start > length ? 0 : (length + start);
+	  }
+	  end = end > length ? length : end;
+	  if (end < 0) {
+	    end += length;
+	  }
+	  length = start > end ? 0 : ((end - start) >>> 0);
+	  start >>>= 0;
+
+	  var result = Array(length);
+	  while (++index < length) {
+	    result[index] = array[index + start];
+	  }
+	  return result;
 	}
 
-	function tweetToAdditionalMember() {
-	    var chair = 'RepGoodlatte';
+	module.exports = baseSlice;
 
-	    // Only add to default tweets
-	    if (state.twitterIDs[0] !== chair) {
-	        return;
-	    }
-
-	    // Find additional members
-	    while (state.twitterIDs.join(' @').length <= 40) {
-	        var member = (0, _sample2.default)(_constants2.default.COMMITTEE_MEMBERS).twitter;
-
-	        if (state.twitterIDs.indexOf(member) > -1) {
-	            continue;
-	        }
-
-	        state.twitterIDs.push(member);
-	    }
-	}
-
-	function debug() {
-	    switch (_staticKit2.default.query.debug) {
-	        case 'default':
-	            sessionStorage.zip = '33880';
-	            break;
-
-	        case 'match':
-	            sessionStorage.zip = '90210';
-	            break;
-
-	        case 'matches':
-	            sessionStorage.zip = '84622';
-	            break;
-
-	        case 'missing':
-	            sessionStorage.zip = '85001';
-	            break;
-
-	        case 'default-calling':
-	            sessionStorage.zip = '33880';
-	            _modal2.default.show('.calling');
-	            break;
-
-	        case 'match-calling':
-	            sessionStorage.zip = '90210';
-	            _modal2.default.show('.calling');
-	            break;
-
-	        case 'matches-calling':
-	            sessionStorage.zip = '84622';
-	            _modal2.default.show('.calling');
-	            break;
-
-	        case 'missing-calling':
-	            sessionStorage.zip = '85001';
-	            _modal2.default.show('.calling');
-	            break;
-	    }
-	}
-
-	exports.default = {
-	    start: start
-	};
 
 /***/ }
 /******/ ]);

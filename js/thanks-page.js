@@ -3,15 +3,17 @@ import clone from 'lodash/clone';
 import Constants from './constants';
 import each from 'lodash/each';
 import Modal from './modal';
+import reduce from 'lodash/reduce';
 import sample from 'lodash/sample';
 import shuffle from 'lodash/shuffle';
+import slice from 'lodash/slice';
 import StaticKit from './static-kit';
 import uniq from 'lodash/uniq';
 
 
 var state = {
     bioguideIDs  : [],
-    callCampaign : 'savethefourthnet-senate-default',
+    callCampaign : 'stop-mass-spying',
     twitterIDs   : [],
     twitterText  : 'support the effort to #ReformECPA & urge leadership to swiftly pass a clean bill! https://savethefourth.net',
     zip: '',
@@ -25,7 +27,6 @@ async function start() {
     var zip = getSavedZip();
     state.zip = zip;
     await updateCampaignWithZip(zip);
-    tweetToAdditionalMember();
 
     // Update suggested Tweet
     $('.tweet-content').html(
@@ -56,16 +57,19 @@ function onFeedbackFormSubmit(e) {
     e.preventDefault();
 
     var $feedbackForm = $(e.target);
-    var message = '';
     var fields = $feedbackForm.serializeArray();
-    each(fields, field => message += `${field.name}:\n${field.value}\n\n`);
+    var message = reduce(
+        fields,
+        field => message += `${field.name}:\n${field.value}\n\n`,
+        ''
+    );
 
     message += '\n\nBioguide IDs: ( ' + state.bioguideIDs.join(', ') + ' )';
     message += '\n\nZIP: ' + state.zip;
 
     $.getJSON(Constants.FEEDBACK_TOOL_URL, {
-        campaign: 'save-the-fourth-senate',
-        subject: 'Feedback from Save the Fourth (Senate)',
+        campaign: Constants.ACTIONKIT_PAGE,
+        subject: 'Feedback from Stop Mass Spying',
         text: message,
     });
 
@@ -162,34 +166,24 @@ async function updateCampaignWithZip(zip) {
         zip: zip || 50316,
     });
 
-    // Search for committee members who represents the visitor
-    var senators = [];
-    var senatorsWithinCommittee = [];
+    // Search for visitor's rep
+    var reps = [];
     each(res.results, representative => {
-        if (representative.chamber !== 'senate') {
+        if (representative.chamber !== 'house') {
             return;
         }
 
-        // A few Senators didn't have Twitter IDs in the Sunlight DB
+        // A few reps didn't have Twitter IDs in the Sunlight DB
         if (!representative.twitter_id) {
             representative.twitter_id = Constants.TWITTER_ID_BACKUPS[representative.bioguide_id];
         }
 
-        senators.push(representative);
-        representative.committee = 0;
-
-        each(Constants.COMMITTEE_MEMBERS_SENATE, bioguideID => {
-            if (representative.bioguide_id === bioguideID) {
-                senatorsWithinCommittee.push(representative);
-                representative.committee = 1;
-                return false;
-            }
-        });
+        reps.push(representative);
     });
 
-    if (senators.length === 0) {
+    if (reps.length === 0) {
         state.twitterText = 'the time to #ReformECPA & require warrants for email is now — reject privacy weakening amendments! https://savethefourth.net';
-        senators = [
+        reps = [
             {
                 bioguide_id: 'G000386',
                 twitter_id: 'ChuckGrassley',
@@ -200,70 +194,19 @@ async function updateCampaignWithZip(zip) {
             .addClass('variation-missing');
     }
 
-    if (zip && senatorsWithinCommittee.length > 0) {
-        if (senatorsWithinCommittee.length === 1) {
-            // Update page (Match)
-            state.callCampaign = 'savethefourthnet-senate-match';
-            state.twitterText = 'the time to #ReformECPA & require warrants for email is now — reject privacy weakening amendments! https://savethefourth.net';
-            $('body')
-                .removeClass('variation-default')
-                .addClass('variation-match');
-        } else {
-            // Update page (Matches)
-            state.callCampaign = 'savethefourthnet-senate-matches';
-            state.twitterText = 'the time to #ReformECPA is now — reject all privacy weakening amendments! https://savethefourth.net';
-            $('body')
-                .removeClass('variation-default')
-                .addClass('variation-matches');
-        }
-
-        // Shuffle and store Twitter IDs
-        each(shuffle(senatorsWithinCommittee), senator => {
-            state.twitterIDs.push(senator.twitter_id);
-        });
-    } else {
-        // Shuffle and store Twitter IDs
-        each(shuffle(senators), senator => {
-            state.twitterIDs.push(senator.twitter_id);
-        });
-    }
-
-    // Shuffle the order of calls
-    // Sort committee members higher though
-    senators = shuffle(senators).sort((a, b) => b.committee - a.committee);
-
-    // Store bioguide IDs for call tool
-    each(senators, senator => {
-        state.bioguideIDs.push(senator.bioguide_id);
+    // Store Twitter & Bioguide IDs
+    each(reps, representative => {
+        state.bioguideIDs.push(representative.bioguide_id);
+        state.twitterIDs.push(representative.twitter_id);
     });
 
-    // Add Grassley. Then add the remaining committee members, in shuffled order.
+    // Add the remaining representatives members, in shuffled order.
     var targets = state.bioguideIDs;
-    var shuffledCommitteeMembers = shuffle(clone(Constants.COMMITTEE_MEMBERS_SENATE));
-    targets = targets.concat('G000386');
-    targets = targets.concat(shuffledCommitteeMembers);
+    var shuffledReps = shuffle(clone(Constants.LEGISLATORS_TO_CALL));
+    targets = targets.concat(shuffledReps);
     targets = uniq(targets);
+    targets = slice(targets, 0, 40);
     state.bioguideIDs = targets;
-}
-
-function tweetToAdditionalMember() {
-    var chair = 'RepGoodlatte';
-
-    // Only add to default tweets
-    if (state.twitterIDs[0] !== chair) {
-        return;
-    }
-
-    // Find additional members
-    while (state.twitterIDs.join(' @').length <= 40) {
-        var member = sample(Constants.COMMITTEE_MEMBERS).twitter;
-
-        if (state.twitterIDs.indexOf(member) > -1) {
-            continue;
-        }
-
-        state.twitterIDs.push(member);
-    }
 }
 
 function debug() {
