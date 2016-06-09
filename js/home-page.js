@@ -21,8 +21,11 @@ function start() {
         Modal.show('#letter');
     });
 
+    // Disclaimer
+    updateDisclaimer();
+
     // Counter
-    FlipCounter.update(Constants.ACTIONKIT_PAGE);
+    FlipCounter.update(Constants.actionKitPage);
 
     // Setup signature form
     var readyToSubmit = false;
@@ -35,7 +38,7 @@ function start() {
         e.preventDefault();
         var valid = true;
 
-        each(Constants.REQUIRED_FIELDS, field => {
+        each(Constants.requiredFields, field => {
             if (!valid) {
                 return;
             }
@@ -79,6 +82,20 @@ function start() {
         readyToSubmit = true;
         $signatureForm.submit();
     });
+}
+
+function updateDisclaimer() {
+    var pattern = /_ns$/;
+    var source = StaticKit.query.cleanedSource;
+    if (!source.match(/_ns$/)) {
+        return;
+    }
+
+    var key = source.replace(pattern, '');
+    var orgName = Constants.orgNames[key];
+    $('.disclaimer .org-name').text(orgName);
+    $('.disclaimer').css({ display: 'block' });
+    $('.squaredFour').remove();
 }
 
 export default {

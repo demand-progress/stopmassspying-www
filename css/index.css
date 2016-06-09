@@ -486,13 +486,15 @@ header .headlines .phones {
 }
 .action span.disclaimer {
     clear: both;
-    color: #3f3b3f;
+    color: #353;
     display: none;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 600;
     line-height: 1.4;
-    margin: 20px auto 0;
+    margin: 24px auto 0;
     max-width: 430px;
     text-align: center;
+    text-shadow: 3px 3px 14px rgba(0, 0, 0, 0.05);
 }
 
 .action-wrapper.counter-is-visible {

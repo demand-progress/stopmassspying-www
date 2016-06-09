@@ -67,8 +67,8 @@ function onFeedbackFormSubmit(e) {
     message += '\n\nBioguide IDs: ( ' + state.bioguideIDs.join(', ') + ' )';
     message += '\n\nZIP: ' + state.zip;
 
-    $.getJSON(Constants.FEEDBACK_TOOL_URL, {
-        campaign: Constants.ACTIONKIT_PAGE,
+    $.getJSON(Constants.feedbackToolURL, {
+        campaign: Constants.actionKitPage,
         subject: 'Feedback from Stop Mass Spying',
         text: message,
     });
@@ -124,7 +124,7 @@ async function onCallFormSubmit(e) {
         repIds: state.bioguideIDs,
     };
 
-    $.getJSON(Constants.CALL_TOOL_URL, callParams);
+    $.getJSON(Constants.callToolURL, callParams);
 
     // Deselect input
     document.activeElement.blur();
@@ -161,8 +161,8 @@ function getSavedZip() {
 }
 
 async function updateCampaignWithZip(zip) {
-    var res = await $.getJSON(Constants.SUNLIGHT_LOCATE_URL, {
-        apikey: Constants.SUNLIGHT_API_KEY,
+    var res = await $.getJSON(Constants.sunlightLocateURL, {
+        apikey: Constants.sunlightAPIKey,
         zip: zip || 50316,
     });
 
@@ -175,7 +175,7 @@ async function updateCampaignWithZip(zip) {
 
         // A few reps didn't have Twitter IDs in the Sunlight DB
         if (!representative.twitter_id) {
-            representative.twitter_id = Constants.TWITTER_ID_BACKUPS[representative.bioguide_id];
+            representative.twitter_id = Constants.twitterIDBackups[representative.bioguide_id];
         }
 
         reps.push(representative);
@@ -208,7 +208,7 @@ async function updateCampaignWithZip(zip) {
 
     // Add the remaining representatives members, in shuffled order.
     var targets = state.bioguideIDs;
-    var shuffledReps = shuffle(clone(Constants.LEGISLATORS_TO_CALL));
+    var shuffledReps = shuffle(clone(Constants.legislatorsToCall));
     targets = targets.concat(shuffledReps);
     targets = uniq(targets);
     targets = slice(targets, 0, 40);

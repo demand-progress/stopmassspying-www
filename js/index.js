@@ -34,7 +34,7 @@ $(f => {
 
         var url =
             'https://www.facebook.com/sharer/sharer.php?u=' +
-            encodeURIComponent(`${Constants.DOMAIN}/?source=${StaticKit.query.cleanedSource}-fbshare`);
+            encodeURIComponent(`${Constants.domain}/?source=${StaticKit.query.cleanedSource}-fbshare`);
         window.open(url);
     });
 
@@ -44,7 +44,7 @@ $(f => {
 
         var url =
             'https://twitter.com/intent/tweet?text=' +
-            encodeURIComponent(Constants.TWEET_TEXT);
+            encodeURIComponent(Constants.tweetText);
         window.open(url);
     });
 
@@ -53,8 +53,8 @@ $(f => {
         e.preventDefault();
 
         var url =
-            'mailto:?subject=' + encodeURIComponent(Constants.EMAIL_SUBJECT) +
-            '&body=' + encodeURIComponent(Constants.EMAIL_BODY);
+            'mailto:?subject=' + encodeURIComponent(Constants.emailSubject) +
+            '&body=' + encodeURIComponent(Constants.emailBody);
         window.location.href = url;
     });
 

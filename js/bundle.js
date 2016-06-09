@@ -107,7 +107,7 @@
 	    (0, _jquery2.default)('a.facebook').on('click', function (e) {
 	        e.preventDefault();
 
-	        var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(_constants2.default.DOMAIN + '/?source=' + _staticKit2.default.query.cleanedSource + '-fbshare');
+	        var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(_constants2.default.domain + '/?source=' + _staticKit2.default.query.cleanedSource + '-fbshare');
 	        window.open(url);
 	    });
 
@@ -115,7 +115,7 @@
 	    (0, _jquery2.default)('a.twitter').on('click', function (e) {
 	        e.preventDefault();
 
-	        var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(_constants2.default.TWEET_TEXT);
+	        var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(_constants2.default.tweetText);
 	        window.open(url);
 	    });
 
@@ -123,7 +123,7 @@
 	    (0, _jquery2.default)('a.email').on('click', function (e) {
 	        e.preventDefault();
 
-	        var url = 'mailto:?subject=' + encodeURIComponent(_constants2.default.EMAIL_SUBJECT) + '&body=' + encodeURIComponent(_constants2.default.EMAIL_BODY);
+	        var url = 'mailto:?subject=' + encodeURIComponent(_constants2.default.emailSubject) + '&body=' + encodeURIComponent(_constants2.default.emailBody);
 	        window.location.href = url;
 	    });
 
@@ -10007,39 +10007,35 @@
 	var constants = {};
 
 	// General
-	constants.DOMAIN = 'stopmassspying.com';
+	constants.domain = 'stopmassspying.com';
 
 	// Social
-	constants.EMAIL_SUBJECT = 'Sign this petition: Tell the Senate to end warrantless snooping';
-	constants.EMAIL_BODY = 'Hi,\n\nI just signed a petition at SaveTheFourth.net telling the Senate to finally #ReformECPA and pass legislation to require the government to get a warrant if it wants to access our private email.\n\nRight now, the law says the government can access emails without a warrant just because they’re over 180 days old. I know — it’s crazy.\n\nHowever, there is a bill before the Senate Judiciary Committee that would require the government get a warrant for email, just like it needs a warrant to access postal mail. It’s a no-brainer, and the bill has already passed the House on a vote of 419-0, thanks to grassroots mobilization. Now, we need to let the Senate know that the public wants this commonsense reform passed. Will you take a moment to contact the Senate?\n\nhttps://' + constants.DOMAIN + '/?source=' + constants.SOURCE_CLEANED + '-emailshare\n\nThanks!';
-	constants.TWEET_TEXT = '.@SenateMajLdr @ChuckGrassley it’s time to #ReformECPA & pass privacy legislation with no weakening amendments! https://savethefourth.net';
-
-	// Source
-	constants.SOURCE = _staticKit2.default.query.source;
-	constants.SOURCE_CLEANED = _staticKit2.default.query.cleanedSource;
+	constants.emailSubject = 'Sign this petition: Tell the Senate to end warrantless snooping';
+	constants.emailBody = 'Hi,\n\nI just signed a petition at SaveTheFourth.net telling the Senate to finally #ReformECPA and pass legislation to require the government to get a warrant if it wants to access our private email.\n\nRight now, the law says the government can access emails without a warrant just because they’re over 180 days old. I know — it’s crazy.\n\nHowever, there is a bill before the Senate Judiciary Committee that would require the government get a warrant for email, just like it needs a warrant to access postal mail. It’s a no-brainer, and the bill has already passed the House on a vote of 419-0, thanks to grassroots mobilization. Now, we need to let the Senate know that the public wants this commonsense reform passed. Will you take a moment to contact the Senate?\n\nhttps://' + constants.domain + '/?source=' + _staticKit2.default.query.cleanedSource + '-emailshare\n\nThanks!';
+	constants.tweetText = '.@SenateMajLdr @ChuckGrassley it’s time to #ReformECPA & pass privacy legislation with no weakening amendments! https://savethefourth.net';
 
 	// APIs
-	constants.ACTIONKIT_PAGE = 'stopmassspying-www';
-	constants.CALL_TOOL_URL = 'https://dp-call-congress.herokuapp.com/create?callback=?';
-	constants.FEEDBACK_TOOL_URL = 'https://dp-feedback-tool.herokuapp.com/api/v1/feedback?callback=?';
-	constants.SUNLIGHT_API_KEY = '3779f52f552743d999b2c5fe1cda70b6';
-	constants.SUNLIGHT_LOCATE_URL = 'https://congress.api.sunlightfoundation.com/legislators/locate?callback=?';
+	constants.actionKitPage = 'stopmassspying-www';
+	constants.callToolURL = 'https://dp-call-congress.herokuapp.com/create?callback=?';
+	constants.feedbackToolURL = 'https://dp-feedback-tool.herokuapp.com/api/v1/feedback?callback=?';
+	constants.sunlightAPIKey = '3779f52f552743d999b2c5fe1cda70b6';
+	constants.sunlightLocateURL = 'https://congress.api.sunlightfoundation.com/legislators/locate?callback=?';
 
 	// Validation
-	constants.REQUIRED_FIELDS = ['email',
-	// 'first_name',
-	// 'last_name',
-	'postcode'];
+	constants.requiredFields = ['email', 'postcode'];
 
 	// Campaign
-	constants.TWITTER_ID_BACKUPS = {
+
+	// 'first_name',
+	// 'last_name',
+	constants.twitterIDBackups = {
 	    'C001075': 'BillCassidy',
 	    'F000457': 'AlFranken',
 	    'K000367': 'AmyKlobuchar',
 	    'P000603': 'RandPaul',
 	    'V000127': 'DavidVitter'
 	};
-	constants.LEGISLATORS_TO_CALL = ['B001287', // Ami Bera (CA)
+	constants.legislatorsToCall = ['B001287', // Ami Bera (CA)
 	'A000370', // Alma Adams (NC)
 	'B000911', // Corrine Brown (FL)
 	'A000371', // Pete Aguilar (CA)
@@ -10151,6 +10147,13 @@
 	'Y000066'];
 
 	// David Young (IA)
+	constants.orgNames = {
+	    credo: 'CREDO Action',
+	    dp: 'Demand Progress',
+	    fftf: 'Fight for the Future',
+	    rootsaction: 'RootsAction'
+	};
+
 	exports.default = constants;
 
 /***/ },
@@ -14660,8 +14663,11 @@
 	        _modal2.default.show('#letter');
 	    });
 
+	    // Disclaimer
+	    updateDisclaimer();
+
 	    // Counter
-	    _flipCounter2.default.update(_constants2.default.ACTIONKIT_PAGE);
+	    _flipCounter2.default.update(_constants2.default.actionKitPage);
 
 	    // Setup signature form
 	    var readyToSubmit = false;
@@ -14674,7 +14680,7 @@
 	        e.preventDefault();
 	        var valid = true;
 
-	        (0, _each2.default)(_constants2.default.REQUIRED_FIELDS, function (field) {
+	        (0, _each2.default)(_constants2.default.requiredFields, function (field) {
 	            if (!valid) {
 	                return;
 	            }
@@ -14720,6 +14726,20 @@
 	    });
 	} // Modules
 
+
+	function updateDisclaimer() {
+	    var pattern = /_ns$/;
+	    var source = _staticKit2.default.query.cleanedSource;
+	    if (!source.match(/_ns$/)) {
+	        return;
+	    }
+
+	    var key = source.replace(pattern, '');
+	    var orgName = _constants2.default.orgNames[key];
+	    (0, _jquery2.default)('.disclaimer .org-name').text(orgName);
+	    (0, _jquery2.default)('.disclaimer').css({ display: 'block' });
+	    (0, _jquery2.default)('.squaredFour').remove();
+	}
 
 	exports.default = {
 	    start: start
@@ -23257,7 +23277,7 @@
 	                        };
 
 
-	                        _jquery2.default.getJSON(_constants2.default.CALL_TOOL_URL, callParams);
+	                        _jquery2.default.getJSON(_constants2.default.callToolURL, callParams);
 
 	                        // Deselect input
 	                        document.activeElement.blur();
@@ -23294,8 +23314,8 @@
 	                switch (_context3.prev = _context3.next) {
 	                    case 0:
 	                        _context3.next = 2;
-	                        return _jquery2.default.getJSON(_constants2.default.SUNLIGHT_LOCATE_URL, {
-	                            apikey: _constants2.default.SUNLIGHT_API_KEY,
+	                        return _jquery2.default.getJSON(_constants2.default.sunlightLocateURL, {
+	                            apikey: _constants2.default.sunlightAPIKey,
 	                            zip: zip || 50316
 	                        });
 
@@ -23313,7 +23333,7 @@
 
 	                            // A few reps didn't have Twitter IDs in the Sunlight DB
 	                            if (!representative.twitter_id) {
-	                                representative.twitter_id = _constants2.default.TWITTER_ID_BACKUPS[representative.bioguide_id];
+	                                representative.twitter_id = _constants2.default.twitterIDBackups[representative.bioguide_id];
 	                            }
 
 	                            reps.push(representative);
@@ -23342,7 +23362,7 @@
 
 	                        // Add the remaining representatives members, in shuffled order.
 	                        targets = state.bioguideIDs;
-	                        shuffledReps = (0, _shuffle2.default)((0, _clone2.default)(_constants2.default.LEGISLATORS_TO_CALL));
+	                        shuffledReps = (0, _shuffle2.default)((0, _clone2.default)(_constants2.default.legislatorsToCall));
 
 	                        targets = targets.concat(shuffledReps);
 	                        targets = (0, _uniq2.default)(targets);
@@ -23382,19 +23402,19 @@
 
 	var _modal2 = _interopRequireDefault(_modal);
 
-	var _reduce = __webpack_require__(472);
+	var _reduce = __webpack_require__(448);
 
 	var _reduce2 = _interopRequireDefault(_reduce);
 
-	var _sample = __webpack_require__(448);
+	var _sample = __webpack_require__(450);
 
 	var _sample2 = _interopRequireDefault(_sample);
 
-	var _shuffle = __webpack_require__(453);
+	var _shuffle = __webpack_require__(455);
 
 	var _shuffle2 = _interopRequireDefault(_shuffle);
 
-	var _slice = __webpack_require__(474);
+	var _slice = __webpack_require__(465);
 
 	var _slice2 = _interopRequireDefault(_slice);
 
@@ -23402,7 +23422,7 @@
 
 	var _staticKit2 = _interopRequireDefault(_staticKit);
 
-	var _uniq = __webpack_require__(463);
+	var _uniq = __webpack_require__(467);
 
 	var _uniq2 = _interopRequireDefault(_uniq);
 
@@ -23430,8 +23450,8 @@
 	    message += '\n\nBioguide IDs: ( ' + state.bioguideIDs.join(', ') + ' )';
 	    message += '\n\nZIP: ' + state.zip;
 
-	    _jquery2.default.getJSON(_constants2.default.FEEDBACK_TOOL_URL, {
-	        campaign: _constants2.default.ACTIONKIT_PAGE,
+	    _jquery2.default.getJSON(_constants2.default.feedbackToolURL, {
+	        campaign: _constants2.default.actionKitPage,
 	        subject: 'Feedback from Stop Mass Spying',
 	        text: message
 	    });
@@ -24467,9 +24487,95 @@
 /* 448 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseRandom = __webpack_require__(449),
+	var arrayReduce = __webpack_require__(437),
+	    baseEach = __webpack_require__(8),
+	    baseIteratee = __webpack_require__(32),
+	    baseReduce = __webpack_require__(449),
+	    isArray = __webpack_require__(27);
+
+	/**
+	 * Reduces `collection` to a value which is the accumulated result of running
+	 * each element in `collection` thru `iteratee`, where each successive
+	 * invocation is supplied the return value of the previous. If `accumulator`
+	 * is not given, the first element of `collection` is used as the initial
+	 * value. The iteratee is invoked with four arguments:
+	 * (accumulator, value, index|key, collection).
+	 *
+	 * Many lodash methods are guarded to work as iteratees for methods like
+	 * `_.reduce`, `_.reduceRight`, and `_.transform`.
+	 *
+	 * The guarded methods are:
+	 * `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,
+	 * and `sortBy`
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Collection
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+	 * @param {*} [accumulator] The initial value.
+	 * @returns {*} Returns the accumulated value.
+	 * @see _.reduceRight
+	 * @example
+	 *
+	 * _.reduce([1, 2], function(sum, n) {
+	 *   return sum + n;
+	 * }, 0);
+	 * // => 3
+	 *
+	 * _.reduce({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {
+	 *   (result[value] || (result[value] = [])).push(key);
+	 *   return result;
+	 * }, {});
+	 * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
+	 */
+	function reduce(collection, iteratee, accumulator) {
+	  var func = isArray(collection) ? arrayReduce : baseReduce,
+	      initAccum = arguments.length < 3;
+
+	  return func(collection, baseIteratee(iteratee, 4), accumulator, initAccum, baseEach);
+	}
+
+	module.exports = reduce;
+
+
+/***/ },
+/* 449 */
+/***/ function(module, exports) {
+
+	/**
+	 * The base implementation of `_.reduce` and `_.reduceRight`, without support
+	 * for iteratee shorthands, which iterates over `collection` using `eachFunc`.
+	 *
+	 * @private
+	 * @param {Array|Object} collection The collection to iterate over.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @param {*} accumulator The initial value.
+	 * @param {boolean} initAccum Specify using the first or last element of
+	 *  `collection` as the initial value.
+	 * @param {Function} eachFunc The function to iterate over `collection`.
+	 * @returns {*} Returns the accumulated value.
+	 */
+	function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
+	  eachFunc(collection, function(value, index, collection) {
+	    accumulator = initAccum
+	      ? (initAccum = false, value)
+	      : iteratee(accumulator, value, index, collection);
+	  });
+	  return accumulator;
+	}
+
+	module.exports = baseReduce;
+
+
+/***/ },
+/* 450 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var baseRandom = __webpack_require__(451),
 	    isArrayLike = __webpack_require__(20),
-	    values = __webpack_require__(450);
+	    values = __webpack_require__(452);
 
 	/**
 	 * Gets a random element from `collection`.
@@ -24496,7 +24602,7 @@
 
 
 /***/ },
-/* 449 */
+/* 451 */
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -24520,10 +24626,10 @@
 
 
 /***/ },
-/* 450 */
+/* 452 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseValues = __webpack_require__(451),
+	var baseValues = __webpack_require__(453),
 	    keys = __webpack_require__(12);
 
 	/**
@@ -24560,10 +24666,10 @@
 
 
 /***/ },
-/* 451 */
+/* 453 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var arrayMap = __webpack_require__(452);
+	var arrayMap = __webpack_require__(454);
 
 	/**
 	 * The base implementation of `_.values` and `_.valuesIn` which creates an
@@ -24585,7 +24691,7 @@
 
 
 /***/ },
-/* 452 */
+/* 454 */
 /***/ function(module, exports) {
 
 	/**
@@ -24612,10 +24718,10 @@
 
 
 /***/ },
-/* 453 */
+/* 455 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var sampleSize = __webpack_require__(454);
+	var sampleSize = __webpack_require__(456);
 
 	/** Used as references for the maximum length and index of an array. */
 	var MAX_ARRAY_LENGTH = 4294967295;
@@ -24643,14 +24749,14 @@
 
 
 /***/ },
-/* 454 */
+/* 456 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseClamp = __webpack_require__(455),
-	    baseRandom = __webpack_require__(449),
-	    isIterateeCall = __webpack_require__(456),
-	    toArray = __webpack_require__(457),
-	    toInteger = __webpack_require__(460);
+	var baseClamp = __webpack_require__(457),
+	    baseRandom = __webpack_require__(451),
+	    isIterateeCall = __webpack_require__(458),
+	    toArray = __webpack_require__(459),
+	    toInteger = __webpack_require__(462);
 
 	/**
 	 * Gets `n` random elements at unique keys from `collection` up to the
@@ -24698,7 +24804,7 @@
 
 
 /***/ },
-/* 455 */
+/* 457 */
 /***/ function(module, exports) {
 
 	/**
@@ -24726,7 +24832,7 @@
 
 
 /***/ },
-/* 456 */
+/* 458 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var eq = __webpack_require__(40),
@@ -24762,7 +24868,7 @@
 
 
 /***/ },
-/* 457 */
+/* 459 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Symbol = __webpack_require__(82),
@@ -24770,11 +24876,11 @@
 	    getTag = __webpack_require__(87),
 	    isArrayLike = __webpack_require__(20),
 	    isString = __webpack_require__(28),
-	    iteratorToArray = __webpack_require__(458),
+	    iteratorToArray = __webpack_require__(460),
 	    mapToArray = __webpack_require__(84),
 	    setToArray = __webpack_require__(85),
-	    stringToArray = __webpack_require__(459),
-	    values = __webpack_require__(450);
+	    stringToArray = __webpack_require__(461),
+	    values = __webpack_require__(452);
 
 	/** `Object#toString` result references. */
 	var mapTag = '[object Map]',
@@ -24826,7 +24932,7 @@
 
 
 /***/ },
-/* 458 */
+/* 460 */
 /***/ function(module, exports) {
 
 	/**
@@ -24850,7 +24956,7 @@
 
 
 /***/ },
-/* 459 */
+/* 461 */
 /***/ function(module, exports) {
 
 	/** Used to compose unicode character classes. */
@@ -24894,10 +25000,10 @@
 
 
 /***/ },
-/* 460 */
+/* 462 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toFinite = __webpack_require__(461);
+	var toFinite = __webpack_require__(463);
 
 	/**
 	 * Converts `value` to an integer.
@@ -24936,10 +25042,10 @@
 
 
 /***/ },
-/* 461 */
+/* 463 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toNumber = __webpack_require__(462);
+	var toNumber = __webpack_require__(464);
 
 	/** Used as references for various `Number` constants. */
 	var INFINITY = 1 / 0,
@@ -24984,7 +25090,7 @@
 
 
 /***/ },
-/* 462 */
+/* 464 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isFunction = __webpack_require__(23),
@@ -25057,10 +25163,90 @@
 
 
 /***/ },
-/* 463 */
+/* 465 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseUniq = __webpack_require__(464);
+	var baseSlice = __webpack_require__(466),
+	    isIterateeCall = __webpack_require__(458),
+	    toInteger = __webpack_require__(462);
+
+	/**
+	 * Creates a slice of `array` from `start` up to, but not including, `end`.
+	 *
+	 * **Note:** This method is used instead of
+	 * [`Array#slice`](https://mdn.io/Array/slice) to ensure dense arrays are
+	 * returned.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 3.0.0
+	 * @category Array
+	 * @param {Array} array The array to slice.
+	 * @param {number} [start=0] The start position.
+	 * @param {number} [end=array.length] The end position.
+	 * @returns {Array} Returns the slice of `array`.
+	 */
+	function slice(array, start, end) {
+	  var length = array ? array.length : 0;
+	  if (!length) {
+	    return [];
+	  }
+	  if (end && typeof end != 'number' && isIterateeCall(array, start, end)) {
+	    start = 0;
+	    end = length;
+	  }
+	  else {
+	    start = start == null ? 0 : toInteger(start);
+	    end = end === undefined ? length : toInteger(end);
+	  }
+	  return baseSlice(array, start, end);
+	}
+
+	module.exports = slice;
+
+
+/***/ },
+/* 466 */
+/***/ function(module, exports) {
+
+	/**
+	 * The base implementation of `_.slice` without an iteratee call guard.
+	 *
+	 * @private
+	 * @param {Array} array The array to slice.
+	 * @param {number} [start=0] The start position.
+	 * @param {number} [end=array.length] The end position.
+	 * @returns {Array} Returns the slice of `array`.
+	 */
+	function baseSlice(array, start, end) {
+	  var index = -1,
+	      length = array.length;
+
+	  if (start < 0) {
+	    start = -start > length ? 0 : (length + start);
+	  }
+	  end = end > length ? length : end;
+	  if (end < 0) {
+	    end += length;
+	  }
+	  length = start > end ? 0 : ((end - start) >>> 0);
+	  start >>>= 0;
+
+	  var result = Array(length);
+	  while (++index < length) {
+	    result[index] = array[index + start];
+	  }
+	  return result;
+	}
+
+	module.exports = baseSlice;
+
+
+/***/ },
+/* 467 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var baseUniq = __webpack_require__(468);
 
 	/**
 	 * Creates a duplicate-free version of an array, using
@@ -25089,14 +25275,14 @@
 
 
 /***/ },
-/* 464 */
+/* 468 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var SetCache = __webpack_require__(77),
-	    arrayIncludes = __webpack_require__(465),
-	    arrayIncludesWith = __webpack_require__(468),
-	    cacheHas = __webpack_require__(469),
-	    createSet = __webpack_require__(470),
+	    arrayIncludes = __webpack_require__(469),
+	    arrayIncludesWith = __webpack_require__(472),
+	    cacheHas = __webpack_require__(473),
+	    createSet = __webpack_require__(474),
 	    setToArray = __webpack_require__(85);
 
 	/** Used as the size to enable large array optimizations. */
@@ -25167,10 +25353,10 @@
 
 
 /***/ },
-/* 465 */
+/* 469 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIndexOf = __webpack_require__(466);
+	var baseIndexOf = __webpack_require__(470);
 
 	/**
 	 * A specialized version of `_.includes` for arrays without support for
@@ -25190,10 +25376,10 @@
 
 
 /***/ },
-/* 466 */
+/* 470 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var indexOfNaN = __webpack_require__(467);
+	var indexOfNaN = __webpack_require__(471);
 
 	/**
 	 * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
@@ -25223,7 +25409,7 @@
 
 
 /***/ },
-/* 467 */
+/* 471 */
 /***/ function(module, exports) {
 
 	/**
@@ -25252,7 +25438,7 @@
 
 
 /***/ },
-/* 468 */
+/* 472 */
 /***/ function(module, exports) {
 
 	/**
@@ -25280,7 +25466,7 @@
 
 
 /***/ },
-/* 469 */
+/* 473 */
 /***/ function(module, exports) {
 
 	/**
@@ -25299,11 +25485,11 @@
 
 
 /***/ },
-/* 470 */
+/* 474 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Set = __webpack_require__(90),
-	    noop = __webpack_require__(471),
+	    noop = __webpack_require__(475),
 	    setToArray = __webpack_require__(85);
 
 	/** Used as references for various `Number` constants. */
@@ -25324,7 +25510,7 @@
 
 
 /***/ },
-/* 471 */
+/* 475 */
 /***/ function(module, exports) {
 
 	/**
@@ -25344,172 +25530,6 @@
 	}
 
 	module.exports = noop;
-
-
-/***/ },
-/* 472 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var arrayReduce = __webpack_require__(437),
-	    baseEach = __webpack_require__(8),
-	    baseIteratee = __webpack_require__(32),
-	    baseReduce = __webpack_require__(473),
-	    isArray = __webpack_require__(27);
-
-	/**
-	 * Reduces `collection` to a value which is the accumulated result of running
-	 * each element in `collection` thru `iteratee`, where each successive
-	 * invocation is supplied the return value of the previous. If `accumulator`
-	 * is not given, the first element of `collection` is used as the initial
-	 * value. The iteratee is invoked with four arguments:
-	 * (accumulator, value, index|key, collection).
-	 *
-	 * Many lodash methods are guarded to work as iteratees for methods like
-	 * `_.reduce`, `_.reduceRight`, and `_.transform`.
-	 *
-	 * The guarded methods are:
-	 * `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,
-	 * and `sortBy`
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Collection
-	 * @param {Array|Object} collection The collection to iterate over.
-	 * @param {Function} [iteratee=_.identity] The function invoked per iteration.
-	 * @param {*} [accumulator] The initial value.
-	 * @returns {*} Returns the accumulated value.
-	 * @see _.reduceRight
-	 * @example
-	 *
-	 * _.reduce([1, 2], function(sum, n) {
-	 *   return sum + n;
-	 * }, 0);
-	 * // => 3
-	 *
-	 * _.reduce({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {
-	 *   (result[value] || (result[value] = [])).push(key);
-	 *   return result;
-	 * }, {});
-	 * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
-	 */
-	function reduce(collection, iteratee, accumulator) {
-	  var func = isArray(collection) ? arrayReduce : baseReduce,
-	      initAccum = arguments.length < 3;
-
-	  return func(collection, baseIteratee(iteratee, 4), accumulator, initAccum, baseEach);
-	}
-
-	module.exports = reduce;
-
-
-/***/ },
-/* 473 */
-/***/ function(module, exports) {
-
-	/**
-	 * The base implementation of `_.reduce` and `_.reduceRight`, without support
-	 * for iteratee shorthands, which iterates over `collection` using `eachFunc`.
-	 *
-	 * @private
-	 * @param {Array|Object} collection The collection to iterate over.
-	 * @param {Function} iteratee The function invoked per iteration.
-	 * @param {*} accumulator The initial value.
-	 * @param {boolean} initAccum Specify using the first or last element of
-	 *  `collection` as the initial value.
-	 * @param {Function} eachFunc The function to iterate over `collection`.
-	 * @returns {*} Returns the accumulated value.
-	 */
-	function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
-	  eachFunc(collection, function(value, index, collection) {
-	    accumulator = initAccum
-	      ? (initAccum = false, value)
-	      : iteratee(accumulator, value, index, collection);
-	  });
-	  return accumulator;
-	}
-
-	module.exports = baseReduce;
-
-
-/***/ },
-/* 474 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var baseSlice = __webpack_require__(475),
-	    isIterateeCall = __webpack_require__(456),
-	    toInteger = __webpack_require__(460);
-
-	/**
-	 * Creates a slice of `array` from `start` up to, but not including, `end`.
-	 *
-	 * **Note:** This method is used instead of
-	 * [`Array#slice`](https://mdn.io/Array/slice) to ensure dense arrays are
-	 * returned.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 3.0.0
-	 * @category Array
-	 * @param {Array} array The array to slice.
-	 * @param {number} [start=0] The start position.
-	 * @param {number} [end=array.length] The end position.
-	 * @returns {Array} Returns the slice of `array`.
-	 */
-	function slice(array, start, end) {
-	  var length = array ? array.length : 0;
-	  if (!length) {
-	    return [];
-	  }
-	  if (end && typeof end != 'number' && isIterateeCall(array, start, end)) {
-	    start = 0;
-	    end = length;
-	  }
-	  else {
-	    start = start == null ? 0 : toInteger(start);
-	    end = end === undefined ? length : toInteger(end);
-	  }
-	  return baseSlice(array, start, end);
-	}
-
-	module.exports = slice;
-
-
-/***/ },
-/* 475 */
-/***/ function(module, exports) {
-
-	/**
-	 * The base implementation of `_.slice` without an iteratee call guard.
-	 *
-	 * @private
-	 * @param {Array} array The array to slice.
-	 * @param {number} [start=0] The start position.
-	 * @param {number} [end=array.length] The end position.
-	 * @returns {Array} Returns the slice of `array`.
-	 */
-	function baseSlice(array, start, end) {
-	  var index = -1,
-	      length = array.length;
-
-	  if (start < 0) {
-	    start = -start > length ? 0 : (length + start);
-	  }
-	  end = end > length ? length : end;
-	  if (end < 0) {
-	    end += length;
-	  }
-	  length = start > end ? 0 : ((end - start) >>> 0);
-	  start >>>= 0;
-
-	  var result = Array(length);
-	  while (++index < length) {
-	    result[index] = array[index + start];
-	  }
-	  return result;
-	}
-
-	module.exports = baseSlice;
 
 
 /***/ }

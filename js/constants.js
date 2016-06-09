@@ -5,11 +5,11 @@ import StaticKit from './static-kit';
 var constants = {};
 
 // General
-constants.DOMAIN = 'stopmassspying.com';
+constants.domain = 'stopmassspying.com';
 
 // Social
-constants.EMAIL_SUBJECT = 'Sign this petition: Tell the Senate to end warrantless snooping';
-constants.EMAIL_BODY = `Hi,
+constants.emailSubject = 'Sign this petition: Tell the Senate to end warrantless snooping';
+constants.emailBody = `Hi,
 
 I just signed a petition at SaveTheFourth.net telling the Senate to finally #ReformECPA and pass legislation to require the government to get a warrant if it wants to access our private email.
 
@@ -17,39 +17,35 @@ Right now, the law says the government can access emails without a warrant just 
 
 However, there is a bill before the Senate Judiciary Committee that would require the government get a warrant for email, just like it needs a warrant to access postal mail. It’s a no-brainer, and the bill has already passed the House on a vote of 419-0, thanks to grassroots mobilization. Now, we need to let the Senate know that the public wants this commonsense reform passed. Will you take a moment to contact the Senate?
 
-https://${constants.DOMAIN}/?source=${constants.SOURCE_CLEANED}-emailshare
+https://${constants.domain}/?source=${StaticKit.query.cleanedSource}-emailshare
 
 Thanks!`;
-constants.TWEET_TEXT      = `.@SenateMajLdr @ChuckGrassley it’s time to #ReformECPA & pass privacy legislation with no weakening amendments! https://savethefourth.net`;
-
-// Source
-constants.SOURCE = StaticKit.query.source;
-constants.SOURCE_CLEANED = StaticKit.query.cleanedSource;
+constants.tweetText      = `.@SenateMajLdr @ChuckGrassley it’s time to #ReformECPA & pass privacy legislation with no weakening amendments! https://savethefourth.net`;
 
 // APIs
-constants.ACTIONKIT_PAGE = 'stopmassspying-www';
-constants.CALL_TOOL_URL = 'https://dp-call-congress.herokuapp.com/create?callback=?';
-constants.FEEDBACK_TOOL_URL = 'https://dp-feedback-tool.herokuapp.com/api/v1/feedback?callback=?';
-constants.SUNLIGHT_API_KEY = '3779f52f552743d999b2c5fe1cda70b6';
-constants.SUNLIGHT_LOCATE_URL = 'https://congress.api.sunlightfoundation.com/legislators/locate?callback=?';
+constants.actionKitPage = 'stopmassspying-www';
+constants.callToolURL = 'https://dp-call-congress.herokuapp.com/create?callback=?';
+constants.feedbackToolURL = 'https://dp-feedback-tool.herokuapp.com/api/v1/feedback?callback=?';
+constants.sunlightAPIKey = '3779f52f552743d999b2c5fe1cda70b6';
+constants.sunlightLocateURL = 'https://congress.api.sunlightfoundation.com/legislators/locate?callback=?';
 
 // Validation
-constants.REQUIRED_FIELDS = [
+constants.requiredFields = [
     'email',
+    'postcode',
     // 'first_name',
     // 'last_name',
-    'postcode',
 ];
 
 // Campaign
-constants.TWITTER_ID_BACKUPS = {
+constants.twitterIDBackups = {
     'C001075': 'BillCassidy',
     'F000457': 'AlFranken',
     'K000367': 'AmyKlobuchar',
     'P000603': 'RandPaul',
     'V000127': 'DavidVitter',
 };
-constants.LEGISLATORS_TO_CALL = [
+constants.legislatorsToCall = [
     'B001287', // Ami Bera (CA)
     'A000370', // Alma Adams (NC)
     'B000911', // Corrine Brown (FL)
@@ -161,5 +157,12 @@ constants.LEGISLATORS_TO_CALL = [
     'Y000033', // Don Young (AK)
     'Y000066', // David Young (IA)
 ];
+
+constants.orgNames = {
+    credo: 'CREDO Action',
+    dp: 'Demand Progress',
+    fftf: 'Fight for the Future',
+    rootsaction: 'RootsAction',
+};
 
 export default constants;
