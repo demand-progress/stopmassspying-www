@@ -93,7 +93,10 @@ function updateDisclaimer() {
 
     var key = source.replace(pattern, '');
     var orgName = Constants.orgNames[key];
-    $('.disclaimer .org-name').text(orgName);
+    if (orgName) {
+        $('.disclaimer .org-name').text(orgName);
+    }
+
     $('.disclaimer').css({ display: 'block' });
     $('.squaredFour').remove();
 }

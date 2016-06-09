@@ -14736,7 +14736,10 @@
 
 	    var key = source.replace(pattern, '');
 	    var orgName = _constants2.default.orgNames[key];
-	    (0, _jquery2.default)('.disclaimer .org-name').text(orgName);
+	    if (orgName) {
+	        (0, _jquery2.default)('.disclaimer .org-name').text(orgName);
+	    }
+
 	    (0, _jquery2.default)('.disclaimer').css({ display: 'block' });
 	    (0, _jquery2.default)('.squaredFour').remove();
 	}
