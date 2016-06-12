@@ -23343,7 +23343,7 @@
 	                        });
 
 	                        if (reps.length === 0) {
-	                            state.twitterText = 'the time to #ReformECPA & require warrants for email is now — reject privacy weakening amendments! https://savethefourth.net';
+	                            state.twitterText = 'vote for approps amendments to end the backdoor spying this week. https://stopmassspying.com';
 	                            reps = [{
 	                                bioguide_id: 'G000386',
 	                                twitter_id: 'ChuckGrassley'
@@ -23437,7 +23437,7 @@
 	    bioguideIDs: [],
 	    callCampaign: 'stop-mass-spying',
 	    twitterIDs: [],
-	    twitterText: 'support the effort to #ReformECPA & urge leadership to swiftly pass a clean bill! https://savethefourth.net',
+	    twitterText: 'vote for approps amendments to end the backdoor spying this week. https://stopmassspying.com',
 	    zip: ''
 	};
 
