@@ -750,7 +750,6 @@ section .share {
     margin: 0;
     padding: 48px 0 0;
     overflow: hidden;
-    display: none;
 }
 .logos .clamp {
     margin: 0 auto;
