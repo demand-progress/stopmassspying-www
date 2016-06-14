@@ -23230,11 +23230,15 @@
 
 	                        // Tweet form logic
 	                        (0, _jquery2.default)('.tweet-wrapper form').on('submit', onTweetFormSubmit);
+	                        (0, _jquery2.default)('a.twitter').off().on('click', function (e) {
+	                            e.preventDefault();
+	                            (0, _jquery2.default)('.tweet-wrapper form').trigger('submit');
+	                        });
 
 	                        // Feedback form logic
 	                        (0, _jquery2.default)('.calling-wrapper form').on('submit', onFeedbackFormSubmit);
 
-	                    case 13:
+	                    case 14:
 	                    case 'end':
 	                        return _context.stop();
 	                }

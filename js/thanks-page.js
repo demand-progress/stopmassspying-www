@@ -48,6 +48,10 @@ async function start() {
 
     // Tweet form logic
     $('.tweet-wrapper form').on('submit', onTweetFormSubmit);
+    $('a.twitter').off().on('click', e => {
+        e.preventDefault();
+        $('.tweet-wrapper form').trigger('submit');
+    });
 
     // Feedback form logic
     $('.calling-wrapper form').on('submit', onFeedbackFormSubmit);
