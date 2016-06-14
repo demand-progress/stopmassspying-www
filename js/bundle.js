@@ -10149,6 +10149,7 @@
 	// David Young (IA)
 	constants.orgNames = {
 	    credo: 'CREDO Action',
+	    dk: 'Daily Kos',
 	    dp: 'Demand Progress',
 	    fftf: 'Fight for the Future',
 	    rootsaction: 'RootsAction'
