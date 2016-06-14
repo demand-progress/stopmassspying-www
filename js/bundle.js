@@ -10010,9 +10010,9 @@
 	constants.domain = 'stopmassspying.com';
 
 	// Social
-	constants.emailSubject = 'Sign this petition: Tell the Senate to end warrantless snooping';
-	constants.emailBody = 'Hi,\n\nI just signed a petition at SaveTheFourth.net telling the Senate to finally #ReformECPA and pass legislation to require the government to get a warrant if it wants to access our private email.\n\nRight now, the law says the government can access emails without a warrant just because they’re over 180 days old. I know — it’s crazy.\n\nHowever, there is a bill before the Senate Judiciary Committee that would require the government get a warrant for email, just like it needs a warrant to access postal mail. It’s a no-brainer, and the bill has already passed the House on a vote of 419-0, thanks to grassroots mobilization. Now, we need to let the Senate know that the public wants this commonsense reform passed. Will you take a moment to contact the Senate?\n\nhttps://' + constants.domain + '/?source=' + _staticKit2.default.query.cleanedSource + '-emailshare\n\nThanks!';
-	constants.tweetText = '.@SenateMajLdr @ChuckGrassley it’s time to #ReformECPA & pass privacy legislation with no weakening amendments! https://savethefourth.net';
+	constants.emailSubject = 'Sign this petition: Tell the House to shut down backdoor surveillance';
+	constants.emailBody = 'Hi,\n\nI just signed a petition at StopMassSpying.com telling the House to pass the Massie-Lofgren amendment.\n\nIt would: \n\n1) Ban the NSA and FBI from conducting "backdoor" database searches for information about Americans, and \n\n2) Ban the NSA and FBI from mandating that private companies add backdoors to the encryption standards that are in place to keep technology users safe from malicious data thefts.\n\nWill you take a moment to contact the House?\n\nhttps://' + constants.domain + '/?source=' + _staticKit2.default.query.cleanedSource + '-emailshare\n\nThanks!';
+	constants.tweetText = 'Let\'s pass the Massie-Lofgren amendment and shut down backdoor surveillance! https://stopmassspying.com';
 
 	// APIs
 	constants.actionKitPage = 'stopmassspying-www';
