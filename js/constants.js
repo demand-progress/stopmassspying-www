@@ -168,6 +168,7 @@ constants.orgNames = {
     dp: 'Demand Progress',
     fftf: 'Fight for the Future',
     rootsaction: 'RootsAction',
+    watchdog: 'Watchdog.net',
 };
 
 export default constants;

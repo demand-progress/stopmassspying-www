@@ -10152,7 +10152,8 @@
 	    dk: 'Daily Kos',
 	    dp: 'Demand Progress',
 	    fftf: 'Fight for the Future',
-	    rootsaction: 'RootsAction'
+	    rootsaction: 'RootsAction',
+	    watchdog: 'Watchdog.net'
 	};
 
 	exports.default = constants;
