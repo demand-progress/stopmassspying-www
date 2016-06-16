@@ -23452,7 +23452,7 @@
 
 	    var $feedbackForm = (0, _jquery2.default)(e.target);
 	    var fields = $feedbackForm.serializeArray();
-	    var message = (0, _reduce2.default)(fields, function (field) {
+	    var message = (0, _reduce2.default)(fields, function (message, field) {
 	        return message += field.name + ':\n' + field.value + '\n\n';
 	    }, '');
 

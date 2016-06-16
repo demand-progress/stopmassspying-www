@@ -64,7 +64,7 @@ function onFeedbackFormSubmit(e) {
     var fields = $feedbackForm.serializeArray();
     var message = reduce(
         fields,
-        field => message += `${field.name}:\n${field.value}\n\n`,
+        (message, field) => message += `${field.name}:\n${field.value}\n\n`,
         ''
     );
 
